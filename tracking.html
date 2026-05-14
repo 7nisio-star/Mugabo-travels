@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Learn the story behind Mugabo Travels & Car Hire. A personal message from Reggane about Uganda's most trusted travel company."><meta name="theme-color" content="#0a0a0a">
-<title>About Us | Mugabo Travels &amp; Car Hire</title>
+<meta name="description" content="Track your Mugabo Travels booking status. Enter your reference to see driver assignment, en route status and arrival confirmation."><meta name="theme-color" content="#0a0a0a">
+<title>Track My Trip | Mugabo Travels &amp; Car Hire</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 <style>
@@ -74,85 +74,107 @@ img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:non
 @media(max-width:900px){.footer-inner{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.footer-inner{grid-template-columns:1fr}}
 
-.about-hero{background:var(--black);padding:5rem 1.5rem 4rem;position:relative;overflow:hidden}
-.about-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 20% 100%,rgba(245,166,35,.1),transparent 60%)}
-.about-hero h1{font-family:var(--fh);font-size:clamp(2rem,5vw,3.2rem);font-weight:900;color:#fff;position:relative;margin-bottom:.6rem;letter-spacing:-.02em}
-.about-hero h1 span{color:var(--orange)}
-.about-hero p{color:rgba(255,255,255,.55);position:relative;font-size:1rem;max-width:520px}
-.ah-slice{height:48px;background:var(--off-white);clip-path:polygon(0 50%,100% 0,100% 100%,0 100%)}
+.track-hero{background:var(--black);padding:4rem 1.5rem 3.5rem;text-align:center;position:relative;overflow:hidden}
+.track-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 110%,rgba(245,166,35,.1),transparent 60%)}
+.track-hero h1{font-family:var(--fh);font-size:clamp(1.9rem,4vw,2.8rem);font-weight:900;color:#fff;position:relative;letter-spacing:-.02em;margin-bottom:.5rem}
+.track-hero h1 span{color:var(--orange)}
+.track-hero p{color:rgba(255,255,255,.55);position:relative;font-size:.97rem}
+.th-slice{height:48px;background:#fff;clip-path:polygon(0 50%,100% 0,100% 100%,0 100%)}
 
-/* FOUNDER */
-.story-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:4rem;align-items:center}
-.founder-card{background:var(--navy-d);border-radius:20px;padding:2rem;
-  position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.06);
-  box-shadow:0 24px 60px rgba(0,0,0,.35)}
-.fc-bg{position:absolute;inset:0;background:linear-gradient(155deg,#2d3580 0%,#1a1f5e 40%,#07091e 100%)}
-.fc-av{position:absolute;top:0;left:0;right:0;height:55%;display:flex;align-items:center;justify-content:center;font-size:4.5rem;opacity:.12}
-.fc-inner{position:relative;z-index:1;padding-top:55%}
-.fc-tag{display:inline-flex;align-items:center;gap:.4rem;background:rgba(245,166,35,.18);border:1px solid rgba(245,166,35,.28);padding:.36rem .8rem;border-radius:7px;font-size:.74rem;color:var(--orange);font-weight:600;margin-bottom:.65rem}
-.fc-name{font-family:var(--fh);font-size:1.35rem;color:#fff;margin-bottom:.2rem}
-.fc-role{font-size:.72rem;color:rgba(255,255,255,.45);letter-spacing:.07em;text-transform:uppercase}
-.fc-quote-card{background:#fff;border-radius:var(--r);padding:1rem 1.1rem;
-  margin-bottom:1.25rem;border-left:3px solid var(--orange);
-  box-shadow:0 4px 16px rgba(0,0,0,.12)}
-.fc-quote-card::before{content:"\201C";font-size:1.75rem;color:var(--orange);line-height:.4;display:block;margin-bottom:.35rem}
-.fc-quote-card p{font-size:.84rem;color:var(--gray-dk);line-height:1.65;font-style:italic}
+/* LOOKUP */
+.lookup-box{max-width:560px;margin:0 auto;background:#fff;border-radius:var(--rl);
+  padding:2rem;box-shadow:0 8px 40px rgba(0,0,0,.1);border:1px solid var(--bdr)}
+.lookup-box h2{font-family:var(--fh);font-size:1.25rem;font-weight:700;margin-bottom:.4rem}
+.lookup-box p{font-size:.85rem;color:var(--gray);margin-bottom:1.25rem;line-height:1.65}
+.lookup-row{display:flex;gap:.6rem}
+.lookup-row .inp{flex:1}
+.lookup-btn{background:var(--black);color:#fff;border:none;padding:.8rem 1.4rem;
+  border-radius:8px;font-family:var(--f);font-weight:600;font-size:.9rem;cursor:pointer;
+  white-space:nowrap;min-height:48px;transition:background .2s}
+.lookup-btn:hover{background:#222}
 
-/* REGGANE MESSAGE */
-.reggane-msg{background:var(--off-white);border-radius:var(--rl);padding:2rem;
-  border:1px solid var(--bdr);position:relative;margin-top:2rem}
-.reggane-msg::before{content:"From Reggane";position:absolute;top:-10px;left:1.25rem;
-  background:var(--orange);color:var(--black);font-size:.65rem;font-weight:700;
-  letter-spacing:.08em;text-transform:uppercase;padding:.2rem .65rem;border-radius:20px}
-.reggane-msg p{font-size:.9rem;color:var(--gray-dk);line-height:1.82;margin-bottom:.75rem}
-.reggane-msg p:last-of-type{margin-bottom:1rem}
-.reggane-sig{font-weight:700;color:var(--black);font-size:.9rem}
-.reggane-sig span{display:block;font-size:.75rem;color:var(--gray);font-weight:400;margin-top:2px}
+/* STATUS CARD */
+.status-wrap{max-width:660px;margin:2.5rem auto 0;display:none}
+.status-card{background:#fff;border-radius:var(--rl);border:1px solid var(--bdr);
+  overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.1)}
+.sc-head{background:var(--black);padding:1.5rem;display:flex;align-items:center;justify-content:space-between}
+.sc-head-left h3{font-family:var(--fh);font-size:1.1rem;color:#fff;margin-bottom:.2rem}
+.sc-head-left p{font-size:.78rem;color:rgba(255,255,255,.48)}
+.sc-badge{background:var(--orange);color:var(--black);padding:.3rem .75rem;border-radius:20px;
+  font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
 
-.story-text .st{letter-spacing:-.02em}
-.lead-q{font-size:1.05rem;color:var(--gray-dk);font-style:italic;border-left:3px solid var(--orange);padding-left:1.1rem;line-height:1.75;margin-bottom:1.25rem}
-.story-text p{color:var(--gray);line-height:1.82;margin-bottom:1rem;font-size:.93rem}
-.story-text p strong{color:var(--black)}
-.btn-row{display:flex;gap:.85rem;flex-wrap:wrap;margin-top:1.5rem}
-@media(max-width:700px){.story-grid{grid-template-columns:1fr}.fc-inner{padding-top:40%}}
+/* TRIP INFO */
+.trip-info{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--bdr)}
+.ti-cell{padding:1.1rem 1.25rem;border-right:1px solid var(--bdr)}
+.ti-cell:last-child{border-right:none}
+.ti-label{font-size:.65rem;font-weight:600;color:var(--gray-lt);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.3rem}
+.ti-val{font-size:.9rem;font-weight:600;color:var(--black)}
 
-/* WHY */
-.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.1rem;margin-top:2.5rem}
-.why-card{background:#fff;border-radius:var(--r);padding:1.5rem;border:1px solid var(--bdr);transition:all .25s;display:flex;flex-direction:column;gap:.55rem}
-.why-card:hover{border-color:var(--black);transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.08)}
-.why-icon{font-size:1.4rem}.why-card h3{font-weight:700;font-size:.92rem;color:var(--black)}.why-card p{font-size:.8rem;color:var(--gray);line-height:1.65}
+/* TIMELINE */
+.timeline{padding:1.75rem 1.5rem}
+.timeline h4{font-size:.7rem;font-weight:600;color:var(--gray-lt);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1.25rem}
+.tl-step{display:flex;gap:1rem;margin-bottom:1.25rem;position:relative}
+.tl-step:last-child{margin-bottom:0}
+.tl-step::before{content:"";position:absolute;left:17px;top:36px;bottom:-1.25rem;width:2px;background:var(--bdr)}
+.tl-step:last-child::before{display:none}
+.tl-icon{width:36px;height:36px;border-radius:50%;border:2px solid var(--bdr);
+  background:#fff;display:flex;align-items:center;justify-content:center;
+  font-size:.9rem;flex-shrink:0;position:relative;z-index:1;transition:all .35s}
+.tl-step.done .tl-icon{background:var(--black);border-color:var(--black);color:#fff}
+.tl-step.active .tl-icon{background:var(--orange);border-color:var(--orange);
+  box-shadow:0 0 0 4px rgba(245,166,35,.2);animation:pulse-icon 2s ease-in-out infinite}
+@keyframes pulse-icon{0%,100%{box-shadow:0 0 0 4px rgba(245,166,35,.2)}50%{box-shadow:0 0 0 8px rgba(245,166,35,.08)}}
+.tl-step.done::before{background:var(--black)}
+.tl-step.active::before{background:linear-gradient(var(--black),var(--bdr))}
+.tl-content{padding-top:4px}
+.tl-title{font-weight:700;font-size:.9rem;color:var(--black);margin-bottom:.2rem}
+.tl-step.pending .tl-title{color:var(--gray-lt)}
+.tl-desc{font-size:.78rem;color:var(--gray);line-height:1.55}
+.tl-time{font-size:.7rem;color:var(--gray-lt);margin-top:.3rem;font-weight:500}
 
-/* STATS */
-.ss{background:var(--black);padding:2.5rem 1.5rem}
-.ss-g{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);text-align:center;gap:1rem;border-top:1px solid var(--bdr-dk);border-bottom:1px solid var(--bdr-dk);padding:2.5rem 0}
-.ss-n{font-family:var(--fh);font-size:2.2rem;font-weight:900;color:var(--orange)}
-.ss-l{font-size:.68rem;color:rgba(255,255,255,.42);text-transform:uppercase;letter-spacing:.08em;margin-top:3px}
-@media(max-width:600px){.ss-g{grid-template-columns:1fr 1fr}}
+/* DRIVER CARD */
+.driver-card{margin:0 1.5rem 1.5rem;background:var(--off-white);border-radius:var(--r);
+  padding:1.1rem;border:1px solid var(--bdr);display:flex;align-items:center;
+  justify-content:space-between;gap:1rem;display:none}
+.driver-card.visible{display:flex}
+.driver-left{display:flex;align-items:center;gap:.85rem}
+.driver-av{width:44px;height:44px;border-radius:50%;background:var(--navy);
+  display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.driver-name{font-weight:700;font-size:.9rem;color:var(--black)}
+.driver-info{font-size:.75rem;color:var(--gray)}
+.driver-right{display:flex;gap:.5rem;flex-shrink:0}
+.driver-call,.driver-wa{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--bdr);
+  background:#fff;display:flex;align-items:center;justify-content:center;
+  font-size:1rem;cursor:pointer;text-decoration:none;transition:all .2s}
+.driver-call:hover{border-color:var(--black);background:var(--black);color:#fff}
+.driver-wa:hover{border-color:var(--green);background:var(--green)}
 
-/* TESTIMONIALS */
-.t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.1rem;margin-top:2.5rem}
-.t-card{background:#fff;border-radius:var(--r);padding:1.5rem;border:1px solid var(--bdr);position:relative;transition:all .25s}
-.t-card:hover{border-color:var(--black);transform:translateY(-2px)}
-.t-stars{color:var(--orange);font-size:.9rem;margin-bottom:.8rem}
-.t-text{font-size:.86rem;color:var(--gray-dk);font-style:italic;line-height:1.7;margin-bottom:1.1rem}
-.t-auth{display:flex;align-items:center;gap:.65rem}
-.t-av{width:38px;height:38px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-.t-name{font-weight:700;font-size:.83rem}.t-from{font-size:.7rem;color:var(--gray-lt)}
-.t-plat{position:absolute;top:1rem;right:1rem;font-size:.62rem;font-weight:600;color:var(--gray);text-transform:uppercase;letter-spacing:.05em}
+/* ACTIONS */
+.track-actions{padding:0 1.5rem 1.5rem;display:flex;gap:.65rem;flex-wrap:wrap}
+.act-btn{flex:1;min-width:140px;background:#fff;border:1.5px solid var(--bdr);
+  border-radius:8px;padding:.75rem;font-family:var(--f);font-size:.78rem;font-weight:600;
+  color:var(--black);cursor:pointer;text-align:center;transition:all .2s;text-decoration:none;
+  display:flex;align-items:center;justify-content:center;gap:.4rem}
+.act-btn:hover{border-color:var(--black)}
 
-/* PHOTO GRID */
-.photo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-top:2.5rem}
-.pc{border-radius:10px;overflow:hidden;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:2.8rem;position:relative;transition:transform .25s}
-.pc:hover{transform:scale(1.03)}.pc.tall{grid-row:span 2;aspect-ratio:auto}
-.p1{background:linear-gradient(135deg,#1a3a1a,#0d2010)}.p2{background:linear-gradient(135deg,#1a1f5e,#0a0f35)}.p3{background:linear-gradient(135deg,#2d1a00,#1a0f00)}.p4{background:linear-gradient(135deg,#1e2060,#0d1040)}.p5{background:linear-gradient(135deg,#0a2e1a,#051508)}
-.plbl{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.75));padding:.75rem .6rem .5rem;font-size:.68rem;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:.04em}
-@media(max-width:600px){.photo-grid{grid-template-columns:1fr 1fr}.pc.tall{grid-row:span 1;aspect-ratio:1}}
+/* WA TRACK NOTE */
+.wa-track-note{max-width:660px;margin:1.5rem auto;background:rgba(37,211,102,.08);
+  border:1px solid rgba(37,211,102,.2);border-radius:var(--r);padding:1.1rem 1.25rem;
+  display:flex;align-items:flex-start;gap:.85rem;font-size:.83rem;color:var(--gray-dk);line-height:1.65}
+.wa-track-note svg{flex-shrink:0;margin-top:.1rem}
+.wa-track-note strong{color:var(--black)}
 
-/* CTA */
-.cta-band{background:var(--off-white);padding:5rem 1.5rem;text-align:center;border-top:1px solid var(--bdr)}
-.cta-band h2{font-family:var(--fh);font-size:clamp(1.75rem,4vw,2.75rem);font-weight:900;color:var(--black);margin-bottom:.75rem;letter-spacing:-.02em}
-.cta-band p{color:var(--gray);max-width:460px;margin:0 auto 2.5rem;line-height:1.72;font-size:.97rem}
-.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+/* DEMO CONTROLS */
+.demo-bar{max-width:660px;margin:2rem auto 0;background:var(--off-white);
+  border-radius:var(--r);padding:1.1rem 1.25rem;border:1px solid var(--bdr);
+  text-align:center}
+.demo-bar p{font-size:.78rem;color:var(--gray);margin-bottom:.75rem}
+.demo-steps{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center}
+.demo-step-btn{background:#fff;border:1.5px solid var(--bdr);border-radius:8px;
+  padding:.5rem 1rem;font-family:var(--f);font-size:.75rem;font-weight:600;
+  color:var(--black);cursor:pointer;transition:all .2s}
+.demo-step-btn:hover{border-color:var(--black)}
+.demo-step-btn.active{border-color:var(--orange);background:rgba(245,166,35,.08);color:var(--orange)}
 </style>
 </head>
 <body><header class="site-header" role="banner">
@@ -181,131 +203,225 @@ var cur=location.pathname.split('/').pop()||'index.html';
 document.querySelectorAll('.nav-links a').forEach(function(a){if(a.getAttribute('href')===cur)a.classList.add('active');});
 })();
 </script>
-<div class="about-hero">
-  <h1>The story behind<br><span>Mugabo Travels</span></h1>
-  <p>Built on local knowledge, driven by passion for Uganda's roads, wildlife and people.</p>
+<div class="track-hero">
+  <h1>Track your <span>trip</span></h1>
+  <p>Enter your booking reference to see your driver's current status.</p>
 </div>
-<div class="ah-slice"></div>
+<div class="th-slice"></div>
 
-<!-- FOUNDER STORY -->
-<section class="section alt" aria-labelledby="story-h">
-  <div class="sw">
-    <div class="story-grid">
+<section class="section sm">
+  <div style="max-width:660px;margin:0 auto">
 
-      <!-- Left: Founder card + Reggane message -->
-      <div>
-        <div class="founder-card">
-          <div class="fc-bg"></div>
-          <div class="fc-av" aria-hidden="true">👨🏾</div>
-          <div class="fc-inner">
-            <div class="fc-quote-card">
-              <p>Every road in Uganda has a story. I know them all.</p>
+    <!-- LOOKUP BOX -->
+    <div class="lookup-box">
+      <h2>Find your booking</h2>
+      <p>Enter the booking reference from your WhatsApp confirmation message (e.g. <strong>MT-2026-0042</strong>), or enter the phone number you booked with.</p>
+      <div class="lookup-row">
+        <input id="refInput" type="text" class="inp" placeholder="MT-2026-0042 or your phone number" autocomplete="off">
+        <button class="lookup-btn" onclick="lookupBooking()">Track →</button>
+      </div>
+      <p style="font-size:.74rem;color:var(--gray-lt);margin-top:.6rem">Don't have a reference? <a href="https://wa.me/256706689064" style="color:var(--orange)">WhatsApp us</a> and we'll send one.</p>
+    </div>
+
+    <!-- STATUS CARD (shown after lookup) -->
+    <div class="status-wrap" id="statusWrap">
+
+      <!-- WA NOTE -->
+      <div class="wa-track-note">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <div><strong>Updates via WhatsApp.</strong> When your driver's status changes, Mugabo Travels will send you a WhatsApp message automatically. This page shows the latest status as of your last refresh.</div>
+      </div>
+
+      <!-- MAIN STATUS CARD -->
+      <div class="status-card">
+        <div class="sc-head">
+          <div class="sc-head-left">
+            <h3 id="sc-ref">Booking MT-2026-0042</h3>
+            <p id="sc-sub">Kampala CBD → Entebbe Airport</p>
+          </div>
+          <div class="sc-badge" id="sc-badge">Confirmed</div>
+        </div>
+
+        <!-- TRIP INFO GRID -->
+        <div class="trip-info">
+          <div class="ti-cell"><div class="ti-label">Pickup</div><div class="ti-val" id="ti-pickup">Kampala CBD</div></div>
+          <div class="ti-cell"><div class="ti-label">Destination</div><div class="ti-val" id="ti-dest">Entebbe Airport</div></div>
+          <div class="ti-cell"><div class="ti-label">Date &amp; Time</div><div class="ti-val" id="ti-dt">Today, 06:30</div></div>
+          <div class="ti-cell"><div class="ti-label">Vehicle</div><div class="ti-val" id="ti-veh">Executive Sedan</div></div>
+        </div>
+
+        <!-- DRIVER CARD (visible from step 2+) -->
+        <div class="driver-card" id="driverCard">
+          <div class="driver-left">
+            <div class="driver-av">👨🏾‍✈️</div>
+            <div>
+              <div class="driver-name" id="drv-name">Denis Mugabo</div>
+              <div class="driver-info" id="drv-info">Toyota Camry · UAY 812K · ⭐ 4.97</div>
             </div>
-            <div class="fc-tag">🏆 Founder &amp; Lead Guide</div>
-            <div class="fc-name">Denis Mugabo</div>
-            <div class="fc-role">15 years on Uganda's roads</div>
+          </div>
+          <div class="driver-right">
+            <a href="tel:+256706689064" class="driver-call" title="Call driver" aria-label="Call driver">📞</a>
+            <a href="https://wa.me/256706689064" class="driver-wa" title="WhatsApp driver" aria-label="WhatsApp driver">💬</a>
           </div>
         </div>
 
-        <!-- REGGANE'S MESSAGE — not Denis -->
-        <div class="reggane-msg">
-          <p>I first came across Mugabo Travels when I was looking for a reliable way to get from Entebbe to Kampala. What I found was something different — a company that genuinely cares.</p>
-          <p>Denis and his team aren't just drivers. They're hosts. They know the roads, they know the parks, and they understand what it means to make a journey feel safe and personal. That's rare anywhere. In Uganda, it's exceptional.</p>
-          <p>If you're planning a trip — whether it's a quick airport run or a week-long safari — you're in the right hands here.</p>
-          <div class="reggane-sig">
-            Reggane
-            <span>Friend of Mugabo Travels</span>
+        <!-- TIMELINE -->
+        <div class="timeline">
+          <h4>Trip Status</h4>
+          <div id="timelineSteps">
+            <!-- Injected by JS -->
           </div>
         </div>
-      </div>
 
-      <!-- Right: Story text -->
-      <div class="story-text">
-        <p class="sh">Our Story</p>
-        <h2 class="st" id="story-h">Why Mugabo Travels exists</h2>
-        <p class="lead-q">"I started this company because I was tired of watching tourists get overcharged, driven by strangers who didn't know the roads, and missing the real Uganda."</p>
-        <p>Denis Mugabo spent over a decade driving routes across Uganda — from the red-dust roads to Bwindi Impenetrable Forest, to early-morning airport runs — before founding Mugabo Travels in 2010.</p>
-        <p>He'd seen too many visitors end up in unreliable vehicles with drivers who didn't speak their language or know the terrain. <strong>He built this company to fix that.</strong></p>
-        <p>Today, Mugabo Travels is a team of licensed, locally-trained drivers who know every shortcut, every lodge, every park gate. We don't do tourist pricing. We do honest pricing — because we want you to come back.</p>
-        <div class="btn-row">
-          <a href="booking.html" class="btn btn-dark">Book a Trip</a>
-          <a href="https://wa.me/256706689064" class="btn btn-wa">💬 WhatsApp Denis</a>
+        <!-- ACTIONS -->
+        <div class="track-actions">
+          <a href="https://wa.me/256706689064?text=Hi%2C%20I%20need%20help%20with%20my%20booking" class="act-btn">💬 Message Driver</a>
+          <a href="tel:+256706689064" class="act-btn">📞 Call Us</a>
+          <button class="act-btn" onclick="location.reload()">🔄 Refresh Status</button>
         </div>
       </div>
 
-    </div>
+      <!-- DEMO CONTROLS -->
+      <div class="demo-bar">
+        <p>🎮 <strong>Demo:</strong> Tap a stage to preview what customers see at each point in the journey.</p>
+        <div class="demo-steps">
+          <button class="demo-step-btn" onclick="setStage(0)">1 · Confirmed</button>
+          <button class="demo-step-btn active" onclick="setStage(1)">2 · Driver Assigned</button>
+          <button class="demo-step-btn" onclick="setStage(2)">3 · En Route</button>
+          <button class="demo-step-btn" onclick="setStage(3)">4 · Arrived</button>
+          <button class="demo-step-btn" onclick="setStage(4)">5 · Trip Complete</button>
+        </div>
+      </div>
+
+    </div><!-- /status-wrap -->
   </div>
 </section>
 
-<!-- STATS -->
-<div class="ss">
-  <div class="ss-g">
-    <div><div class="ss-n">15</div><div class="ss-l">Years Experience</div></div>
-    <div><div class="ss-n">500+</div><div class="ss-l">Clients Served</div></div>
-    <div><div class="ss-n">12</div><div class="ss-l">Fleet Vehicles</div></div>
-    <div><div class="ss-n">4.9★</div><div class="ss-l">Average Rating</div></div>
-  </div>
-</div>
-
-<!-- WHY US -->
-<section class="section" aria-labelledby="why-h">
+<!-- HOW IT WORKS -->
+<section class="section alt" aria-labelledby="how-h">
   <div class="sw">
-    <p class="sh">Why Choose Us</p>
-    <h2 class="st" id="why-h">What makes us different</h2>
-    <div class="why-grid">
-      <div class="why-card"><div class="why-icon">🗺️</div><h3>We know every road</h3><p>Our drivers have personally navigated routes to every major park, airport and city in Uganda.</p></div>
-      <div class="why-card"><div class="why-icon">🚫</div><h3>No tourist overpricing</h3><p>Fair, transparent rates for everyone. Always quoted upfront before your trip.</p></div>
-      <div class="why-card"><div class="why-icon">⏱️</div><h3>Punctual airport pickups</h3><p>We track your flight. If it's delayed, we wait — no extra charge, no drama.</p></div>
-      <div class="why-card"><div class="why-icon">🔧</div><h3>Maintained &amp; insured</h3><p>Every vehicle serviced monthly, fully insured, inspected before each trip.</p></div>
-      <div class="why-card"><div class="why-icon">📱</div><h3>WhatsApp-first</h3><p>Book, change, ask — all over WhatsApp. No call centres. Just a real person.</p></div>
-      <div class="why-card"><div class="why-icon">🌍</div><h3>100% Ugandan-owned</h3><p>Your money stays in the community and supports local families.</p></div>
+    <p class="sh">How Tracking Works</p>
+    <h2 class="st" id="how-h">Simple, WhatsApp-first updates</h2>
+    <p class="sd">No app required. Status updates come to you automatically.</p>
+    <div class="ga">
+      <div style="padding:1.5rem;background:#fff;border-radius:var(--rl);border:1px solid var(--bdr)">
+        <div style="font-size:2rem;margin-bottom:.85rem">📋</div>
+        <h3 style="font-weight:700;font-size:.97rem;margin-bottom:.4rem">1. Book your trip</h3>
+        <p style="font-size:.82rem;color:var(--gray);line-height:1.65">Complete the booking form or send a WhatsApp. You'll receive a confirmation with your booking reference.</p>
+      </div>
+      <div style="padding:1.5rem;background:#fff;border-radius:var(--rl);border:1px solid var(--bdr)">
+        <div style="font-size:2rem;margin-bottom:.85rem">💬</div>
+        <h3 style="font-weight:700;font-size:.97rem;margin-bottom:.4rem">2. Get WhatsApp updates</h3>
+        <p style="font-size:.82rem;color:var(--gray);line-height:1.65">As your trip progresses, you'll receive WhatsApp messages at each stage — driver assigned, en route, arrived.</p>
+      </div>
+      <div style="padding:1.5rem;background:#fff;border-radius:var(--rl);border:1px solid var(--bdr)">
+        <div style="font-size:2rem;margin-bottom:.85rem">📍</div>
+        <h3 style="font-weight:700;font-size:.97rem;margin-bottom:.4rem">3. Track here anytime</h3>
+        <p style="font-size:.82rem;color:var(--gray);line-height:1.65">Use your booking reference to check your trip status on this page at any time. No login required.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="section alt" aria-labelledby="rev-h">
-  <div class="sw">
-    <p class="sh">Client Reviews</p>
-    <h2 class="st" id="rev-h">What our clients say</h2>
-    <div class="t-grid">
-      <article class="t-card"><div class="t-plat">Google</div><div class="t-stars">★★★★★</div>
-        <p class="t-text">"Denis picked us up at 4am and drove us to Bwindi for our gorilla permit. Perfect service, immaculate Land Cruiser."</p>
-        <div class="t-auth"><div class="t-av">🇬🇧</div><div><div class="t-name">Sarah &amp; James T.</div><div class="t-from">London, UK</div></div></div></article>
-      <article class="t-card"><div class="t-plat">TripAdvisor</div><div class="t-stars">★★★★★</div>
-        <p class="t-text">"Transparent pricing, no hidden fees, driver knew every back road. Highly recommend for corporate clients."</p>
-        <div class="t-auth"><div class="t-av">🇩🇪</div><div><div class="t-name">Markus B.</div><div class="t-from">Munich, Germany</div></div></div></article>
-      <article class="t-card"><div class="t-plat">WhatsApp</div><div class="t-stars">★★★★★</div>
-        <p class="t-text">"Used 3 times — city tour, airport, safari. Spotless vehicle, driver on time, every single time."</p>
-        <div class="t-auth"><div class="t-av">🇺🇸</div><div><div class="t-name">Amara N.</div><div class="t-from">New York, USA</div></div></div></article>
-    </div>
-  </div>
-</section>
+<script>
+var STAGES = [
+  {
+    badge:'Confirmed', driverVisible:false,
+    steps:[
+      {icon:'✅', label:'Booking Confirmed', desc:'Your trip has been received and confirmed by Mugabo Travels.', time:'Just now', state:'done'},
+      {icon:'👨🏾‍✈️', label:'Driver Being Assigned', desc:'We are matching you with the best available driver for your trip.', time:'', state:'active'},
+      {icon:'🚗', label:'Driver En Route to You', desc:'', time:'', state:'pending'},
+      {icon:'📍', label:'Driver Has Arrived', desc:'', time:'', state:'pending'},
+      {icon:'🏁', label:'Trip Complete', desc:'', time:'', state:'pending'},
+    ]
+  },
+  {
+    badge:'Driver Assigned', driverVisible:true,
+    steps:[
+      {icon:'✅', label:'Booking Confirmed', desc:'Your trip was confirmed.', time:'06:00', state:'done'},
+      {icon:'👨🏾‍✈️', label:'Driver Assigned', desc:'Denis Mugabo has been assigned to your trip. Toyota Camry · UAY 812K.', time:'06:15', state:'done'},
+      {icon:'🚗', label:'Driver En Route to You', desc:'Your driver is heading to your pickup location now.', time:'', state:'active'},
+      {icon:'📍', label:'Driver Has Arrived', desc:'', time:'', state:'pending'},
+      {icon:'🏁', label:'Trip Complete', desc:'', time:'', state:'pending'},
+    ]
+  },
+  {
+    badge:'En Route', driverVisible:true,
+    steps:[
+      {icon:'✅', label:'Booking Confirmed', desc:'', time:'06:00', state:'done'},
+      {icon:'👨🏾‍✈️', label:'Driver Assigned', desc:'', time:'06:15', state:'done'},
+      {icon:'🚗', label:'Driver En Route to You', desc:'Denis is on his way. He will arrive at your pickup location shortly.', time:'06:20', state:'active'},
+      {icon:'📍', label:'Driver Has Arrived', desc:'', time:'', state:'pending'},
+      {icon:'🏁', label:'Trip Complete', desc:'', time:'', state:'pending'},
+    ]
+  },
+  {
+    badge:'Driver Arrived ✓', driverVisible:true,
+    steps:[
+      {icon:'✅', label:'Booking Confirmed', desc:'', time:'06:00', state:'done'},
+      {icon:'👨🏾‍✈️', label:'Driver Assigned', desc:'', time:'06:15', state:'done'},
+      {icon:'🚗', label:'Driver En Route', desc:'', time:'06:20', state:'done'},
+      {icon:'📍', label:'Driver Has Arrived', desc:'Denis is at your pickup location. Please make your way to the vehicle. 🎉', time:'06:30', state:'active'},
+      {icon:'🏁', label:'Trip Complete', desc:'', time:'', state:'pending'},
+    ]
+  },
+  {
+    badge:'Complete ✓', driverVisible:false,
+    steps:[
+      {icon:'✅', label:'Booking Confirmed', desc:'', time:'06:00', state:'done'},
+      {icon:'👨🏾‍✈️', label:'Driver Assigned', desc:'', time:'06:15', state:'done'},
+      {icon:'🚗', label:'Driver En Route', desc:'', time:'06:20', state:'done'},
+      {icon:'📍', label:'Driver Arrived', desc:'', time:'06:30', state:'done'},
+      {icon:'🏁', label:'Trip Complete', desc:'Thank you for travelling with Mugabo Travels! We hope you had a great journey. 🙏', time:'08:45', state:'done'},
+    ]
+  }
+];
 
-<!-- PHOTOS -->
-<section class="section dark" aria-labelledby="gal-h">
-  <div class="sw">
-    <p class="sh">In the Field</p>
-    <h2 class="st" id="gal-h">Travel Uganda with us</h2>
-    <div class="photo-grid">
-      <div class="pc tall p1"><span>🐘</span><div class="plbl">Queen Elizabeth NP</div></div>
-      <div class="pc p2"><span>🛻</span><div class="plbl">Safari Land Cruiser</div></div>
-      <div class="pc p3"><span>🏙️</span><div class="plbl">Kampala City Tour</div></div>
-      <div class="pc p4"><span>✈️</span><div class="plbl">Entebbe Airport</div></div>
-      <div class="pc p5"><span>👨🏾‍✈️</span><div class="plbl">Our Drivers</div></div>
-    </div>
-    <p style="text-align:center;margin-top:1.25rem;font-size:.78rem;color:rgba(255,255,255,.35)">📸 Replace with real photos — send via WhatsApp</p>
-  </div>
-</section>
+var currentStage = 1;
 
-<div class="cta-band">
-  <h2>Ready to explore Uganda?</h2>
-  <p>Tell us where you're going — we'll have the right vehicle, driver and fair price ready within the hour.</p>
-  <div class="cta-btns">
-    <a href="booking.html" class="btn btn-dark btn-lg">📋 Book a Trip</a>
-    <a href="https://wa.me/256706689064?text=Hello%20Mugabo%20Travels!" class="btn btn-wa btn-lg">💬 Book via WhatsApp</a>
-  </div>
-</div>
+function renderTimeline(stage) {
+  var data = STAGES[stage];
+  document.getElementById('sc-badge').textContent = data.badge;
+  document.getElementById('driverCard').classList.toggle('visible', data.driverVisible);
+  var html = '';
+  data.steps.forEach(function(s) {
+    html += '<div class="tl-step '+s.state+'">';
+    html += '<div class="tl-icon">'+s.icon+'</div>';
+    html += '<div class="tl-content">';
+    html += '<div class="tl-title">'+s.label+'</div>';
+    if(s.desc) html += '<div class="tl-desc">'+s.desc+'</div>';
+    if(s.time) html += '<div class="tl-time">'+s.time+'</div>';
+    html += '</div></div>';
+  });
+  document.getElementById('timelineSteps').innerHTML = html;
+  document.querySelectorAll('.demo-step-btn').forEach(function(b,i){
+    b.classList.toggle('active', i===stage);
+  });
+}
+
+function setStage(n) {
+  currentStage = n;
+  renderTimeline(n);
+}
+
+function lookupBooking() {
+  var val = document.getElementById('refInput').value.trim();
+  if(!val) { alert('Please enter a booking reference or phone number.'); return; }
+  document.getElementById('statusWrap').style.display = 'block';
+  document.getElementById('sc-ref').textContent = 'Booking ' + (val.toUpperCase().startsWith('MT') ? val.toUpperCase() : 'MT-2026-0042');
+  renderTimeline(currentStage);
+  document.getElementById('statusWrap').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+// Also show demo on load if URL has ?demo=1
+if(location.search.includes('demo')) {
+  document.getElementById('refInput').value = 'MT-2026-0042';
+  lookupBooking();
+}
+
+// Initialise demo stage 1
+renderTimeline(1);
+</script>
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
     <div class="f-col"><div class="footer-brand">Mugabo <em>Travels</em></div>
