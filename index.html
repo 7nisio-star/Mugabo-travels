@@ -35,6 +35,277 @@
 }
 </script>
 <style>
+
+/* ══════════════════════════════════════════════
+   UGANDA FLAG PALETTE OVERRIDE
+   Black · Yellow · Red  (Ugandan national colours)
+   ══════════════════════════════════════════════ */
+:root {
+  --navy:        #8B0000;   /* deep crimson — secondary brand */
+  --navy-d:      #111111;   /* near-black (replaces navy-deep) */
+  --navy-m:      #C00000;   /* mid red */
+  --orange:      #FCDC04;   /* Uganda gold / yellow — primary CTA */
+  --orange-d:    #E8C800;   /* darker gold */
+  --orange-lt:   #FFFBE6;   /* pale gold tint */
+  --green:       #25D366;   /* WhatsApp green — keep */
+  --black:       #111111;   /* site near-black */
+  --off-white:   #FAFAF7;   /* clean neutral background */
+  --white:       #FFFFFF;
+  --gray:        #555555;   /* AA-pass on white */
+  --gray-lt:     #888888;   /* secondary text — AA on white */
+  --gray-dk:     #222222;
+  --bdr:         #E0E0E0;
+  --bdr-dk:      #2A2A2A;
+  --r:           10px;
+  --rl:          16px;
+  --sh:          0 4px 20px rgba(0,0,0,.12);
+  --sh-lg:       0 12px 44px rgba(0,0,0,.18);
+  --f:           'Inter', system-ui, -apple-system, sans-serif;
+  --fh:          'Playfair Display', Georgia, serif;
+
+  /* Uganda flag stripe references */
+  --ug-black:    #111111;
+  --ug-yellow:   #FCDC04;
+  --ug-red:      #D90000;
+}
+
+/* ── NAVBAR — black with gold accent ── */
+.site-header {
+  background: rgba(17,17,17,.97) !important;
+  border-bottom: 2px solid var(--ug-yellow) !important;
+}
+.nav-brand img { border-color: var(--ug-yellow) !important; }
+.brand-main em { color: var(--ug-yellow) !important; }
+.brand-sub { color: rgba(255,255,255,.6) !important; }
+.nav-links a { color: rgba(255,255,255,.65) !important; }
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: #fff !important;
+  background: rgba(252,220,4,.12) !important;
+}
+.nav-links a[aria-current="page"] {
+  border: 1.5px solid var(--ug-yellow) !important;
+}
+.nav-links .nav-book {
+  background: var(--ug-red) !important;
+  color: #fff !important;
+  box-shadow: 0 3px 14px rgba(217,0,0,.4) !important;
+  border-color: var(--ug-red) !important;
+}
+.nav-links .nav-book:hover { background: #B00000 !important; }
+
+/* ── UGANDA FLAG STRIPE on hero ── */
+.hero-left {
+  background: var(--ug-black) !important;
+  border-right: 4px solid var(--ug-yellow) !important;
+}
+.hero-left::before {
+  background: radial-gradient(ellipse at 0% 90%,rgba(217,0,0,.1),transparent 60%) !important;
+}
+.hero-eyebrow {
+  background: rgba(252,220,4,.15) !important;
+  border-color: rgba(252,220,4,.35) !important;
+  color: var(--ug-yellow) !important;
+}
+.hero h1 span { color: var(--ug-yellow) !important; }
+.tp-dot { background: var(--ug-yellow) !important; }
+
+/* ── BOOKING WIDGET — clean white card on black ── */
+.bw { box-shadow: 0 20px 60px rgba(0,0,0,.35) !important; }
+.bw-tab.active {
+  color: var(--ug-black) !important;
+  border-bottom-color: var(--ug-red) !important;
+  font-weight: 700 !important;
+}
+.bw-field:focus-within {
+  border-color: var(--ug-red) !important;
+  box-shadow: 0 0 0 3px rgba(217,0,0,.12) !important;
+}
+.bw-dt:focus-within { border-color: var(--ug-red) !important; }
+.bw-return:hover { border-color: var(--ug-red) !important; color: var(--ug-red) !important; }
+.bw-return.active { border-color: var(--ug-red) !important; color: var(--ug-red) !important; }
+.pax-btn:hover { border-color: var(--ug-red) !important; color: var(--ug-red) !important; }
+.bw-go {
+  background: var(--ug-red) !important;
+  color: #fff !important;
+}
+.bw-go:hover { background: #B00000 !important; transform: translateY(-1px); }
+
+/* ── BUTTONS ── */
+.btn-dark {
+  background: var(--ug-black) !important;
+  border-color: var(--ug-black) !important;
+  color: #fff !important;
+}
+.btn-dark:hover { background: #2a2a2a !important; }
+.btn-o {
+  background: var(--ug-yellow) !important;
+  border-color: var(--ug-yellow) !important;
+  color: var(--ug-black) !important;
+  font-weight: 800 !important;
+}
+.btn-o:hover { background: var(--ug-red) !important; border-color: var(--ug-red) !important; color: #fff !important; }
+
+/* Primary action buttons — red */
+.bk-card-head { background: var(--ug-black) !important; }
+.step-badge { background: var(--ug-yellow) !important; color: var(--ug-black) !important; }
+.step.active .step-num { border-color: var(--ug-red) !important; background: var(--ug-red) !important; color: #fff !important; }
+.step.done .step-num { border-color: var(--ug-black) !important; background: var(--ug-black) !important; }
+.step.active .step-label { color: var(--ug-red) !important; }
+.tt-card.selected { border-color: var(--ug-red) !important; background: rgba(217,0,0,.06) !important; box-shadow: 0 0 0 3px rgba(217,0,0,.15) !important; }
+.tt-card:hover { border-color: var(--ug-red) !important; background: rgba(217,0,0,.04) !important; }
+.veh-card.selected { border-color: var(--ug-red) !important; background: rgba(217,0,0,.06) !important; }
+.veh-card:hover { border-color: var(--ug-red) !important; }
+
+/* Booking "next" buttons */
+.bk-nav .btn-o,
+button.btn-o { background: var(--ug-red) !important; border-color: var(--ug-red) !important; color: #fff !important; }
+.wa-confirm-btn { box-shadow: 0 4px 20px rgba(37,211,102,.4) !important; }
+
+/* Form focus states */
+.inp:focus,.sel:focus,.txta:focus { border-color: var(--ug-red) !important; box-shadow: 0 0 0 3px rgba(217,0,0,.1) !important; }
+.inp.valid,.sel.valid { border-color: #22c55e !important; }
+.inp.invalid,.inp.has-error,.sel.invalid { border-color: var(--ug-red) !important; }
+
+/* ── PAGE HERO ── */
+.page-hero { background: var(--ug-black) !important; border-bottom: 4px solid var(--ug-yellow) !important; }
+.page-hero::before { background: radial-gradient(ellipse at 50% 110%,rgba(217,0,0,.18),transparent 60%) !important; }
+.page-hero h1 span { color: var(--ug-yellow) !important; }
+.page-hero p { color: rgba(255,255,255,.75) !important; }
+.ph-slice { background: #fff !important; }
+.ph-slice-alt { background: var(--off-white) !important; }
+
+/* ── ABOUT PAGE ── */
+.fc-bg { background: linear-gradient(155deg,#8B0000 0%,#5a0000 40%,#111111 100%) !important; }
+.fc-quote-card { border-left-color: var(--ug-yellow) !important; }
+.fc-tag {
+  background: rgba(252,220,4,.18) !important;
+  border-color: rgba(252,220,4,.35) !important;
+  color: var(--ug-yellow) !important;
+}
+.reggane-msg::before { background: var(--ug-red) !important; color: #fff !important; }
+.lead-q { border-left-color: var(--ug-red) !important; }
+.why-card:hover { border-color: var(--ug-red) !important; }
+
+/* ── UGANDA FLAG STRIPE ACCENT — nav bottom border ── */
+/* 3-stripe flag bar under nav: black | yellow | red */
+.site-header::after {
+  content: "";
+  display: block;
+  height: 5px;
+  background: linear-gradient(to right,
+    var(--ug-black) 0%, var(--ug-black) 33.33%,
+    var(--ug-yellow) 33.33%, var(--ug-yellow) 66.66%,
+    var(--ug-red) 66.66%, var(--ug-red) 100%
+  );
+}
+
+/* ── STATS STRIP ── */
+.stats-strip { background: var(--ug-black) !important; border-top: 3px solid var(--ug-yellow) !important; border-bottom: 3px solid var(--ug-yellow) !important; }
+.stats-strip .sw { border: none !important; padding: 2.5rem 0 !important; }
+.sn { color: var(--ug-yellow) !important; }
+.sl { color: rgba(255,255,255,.7) !important; }
+
+/* ── TRUST BADGES ── */
+.trust-badge:hover { border-color: var(--ug-red) !important; }
+.trust-icon { background: rgba(217,0,0,.08) !important; border-color: rgba(217,0,0,.2) !important; }
+
+/* ── TESTIMONIALS ── */
+.t-card:hover { border-color: var(--ug-red) !important; }
+.t-stars { color: var(--ug-yellow) !important; }
+.t-av { background: var(--ug-black) !important; border: 2px solid var(--ug-yellow) !important; }
+
+/* ── SECTION TAGS ── */
+.sh { color: var(--ug-red) !important; }
+
+/* ── FEAT CARDS ── */
+.feat-card:hover { border-color: var(--ug-red) !important; }
+.feat-card:hover .feat-icon { background: var(--ug-black) !important; }
+.feat-icon { background: rgba(217,0,0,.08) !important; border-color: rgba(217,0,0,.15) !important; }
+
+/* ── CTA BAND ── */
+.cta-band { background: var(--ug-black) !important; border-top: none !important; }
+.cta-band h2 { color: var(--ug-yellow) !important; }
+.cta-band p { color: rgba(255,255,255,.7) !important; }
+.cta-band .btn-dark {
+  background: var(--ug-yellow) !important;
+  color: var(--ug-black) !important;
+  border-color: var(--ug-yellow) !important;
+  font-weight: 800 !important;
+}
+.cta-band .btn-dark:hover { background: #E8C800 !important; }
+.cta-band .btn-out {
+  background: rgba(255,255,255,.08) !important;
+  color: #fff !important;
+  border-color: rgba(255,255,255,.3) !important;
+}
+.cta-band .btn-out:hover { border-color: var(--ug-yellow) !important; color: var(--ug-yellow) !important; }
+
+/* ── FOOTER ── */
+.site-footer {
+  background: #0a0a0a !important;
+  border-top: 4px solid var(--ug-yellow) !important;
+}
+.footer-brand em { color: var(--ug-yellow) !important; }
+.site-footer h4 { color: var(--ug-yellow) !important; }
+.site-footer a:hover { color: var(--ug-yellow) !important; }
+.f-bottom { border-top-color: rgba(252,220,4,.2) !important; }
+.f-bottom strong { color: var(--ug-yellow) !important; }
+
+/* ── WA FAB ── stays green ── */
+/* ── TRACKING ── */
+.bk-hero, .track-hero, .bk-hero { border-bottom: 4px solid var(--ug-yellow) !important; }
+
+/* ── SERVICES / FLEET ── */
+.svc-big:hover { border-color: var(--ug-red) !important; }
+.svc-big-icon { background: rgba(217,0,0,.08) !important; border-color: rgba(217,0,0,.15) !important; }
+.svc-big:hover .svc-big-icon { background: var(--ug-black) !important; }
+.fleet-card:hover { border-color: var(--ug-yellow) !important; }
+.fv-top { background: var(--ug-black) !important; }
+.fv-badge {
+  background: rgba(252,220,4,.2) !important;
+  border-color: rgba(252,220,4,.35) !important;
+  color: var(--ug-yellow) !important;
+}
+
+/* ── PHOTO GRID ── */
+.p2 { background: linear-gradient(135deg,#8B0000,#5a0000) !important; }
+.p3 { background: linear-gradient(135deg,#D90000,#8B0000) !important; }
+.p4 { background: linear-gradient(135deg,#2a0000,#111111) !important; }
+
+/* ── CONTACT ── */
+.ct-card, .contact-info-card, .cic { background: var(--ug-black) !important; border: 1px solid rgba(252,220,4,.2) !important; }
+.ct-card h3, .contact-info-card h3 { color: var(--ug-yellow) !important; }
+.cdi, .cd-icon { background: rgba(252,220,4,.15) !important; }
+.wa-link2:hover,.wa-l2:hover { opacity:.88; }
+
+/* ── DARK SECTION ── */
+.section.dark { background: var(--ug-black) !important; }
+.section.dark .st { color: var(--ug-yellow) !important; }
+
+/* ── TRACKING TIMELINE ── */
+.tl-step.active .tl-icon {
+  background: var(--ug-red) !important;
+  border-color: var(--ug-red) !important;
+  box-shadow: 0 0 0 4px rgba(217,0,0,.2), 0 0 0 8px rgba(217,0,0,.08) !important;
+}
+.tl-step.done .tl-icon { background: var(--ug-black) !important; border-color: var(--ug-black) !important; }
+.tl-step.done::before { background: var(--ug-black) !important; }
+.tl-step.active::before { background: linear-gradient(var(--ug-black),var(--bdr)) !important; }
+.sc-head { background: var(--ug-black) !important; border-bottom: 2px solid var(--ug-yellow) !important; }
+.sc-badge { background: var(--ug-yellow) !important; color: var(--ug-black) !important; }
+
+/* ── DEMO STEP BUTTONS (tracking) ── */
+.demo-step-btn.active { border-color: var(--ug-red) !important; color: var(--ug-red) !important; background: rgba(217,0,0,.08) !important; }
+.lookup-btn { background: var(--ug-black) !important; border: 2px solid var(--ug-yellow) !important; color: #fff !important; }
+.lookup-btn:hover { background: var(--ug-red) !important; border-color: var(--ug-red) !important; }
+
+/* ── FOCUS RING ── yellow, high visibility ── */
+.btn:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid var(--ug-yellow) !important;
+  outline-offset: 3px !important;
+}
+
 /* ═══════════════════════════════════════════════
    MUGABO TRAVELS — Design System (Warm Palette)
    ═══════════════════════════════════════════════ */
@@ -380,7 +651,7 @@ button,input,select,textarea{font-family:var(--f)}
 .hero-right{position:relative;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQwIDgxMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgc2xpY2UiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJza3kiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzA0MDcxYSIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjMGUxNjUwIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iNjAlIiBzdG9wLWNvbG9yPSIjN2EyZTEwIi8+PHN0b3Agb2Zmc2V0PSI4MCUiIHN0b3AtY29sb3I9IiNjOTVmMWEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlODgzMWEiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9Im0xIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlMjY2YSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI1MmQ4MCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9Im0yIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzEyMTc0OCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMWY1ZSIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9Im0zIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBhMTAzMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMTM0MCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN2IiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNkMjIwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzE1MGMwMCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJkIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M4NjAxMCIgc3RvcC1vcGFjaXR5PSIwIi8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNjODYwMTAiIHN0b3Atb3BhY2l0eT0iLjU1Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYTA0ODA4IiBzdG9wLW9wYWNpdHk9Ii44Ii8+PC9saW5lYXJHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ic3VuIiBjeD0iNTAlIiBjeT0iNDglIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmZmOGUwIi8+PHN0b3Agb2Zmc2V0PSIzMCUiIHN0b3AtY29sb3I9IiNmZmNjNjYiIHN0b3Atb3BhY2l0eT0iLjciLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNWE2MjMiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxNDQwIiBoZWlnaHQ9IjgxMCIgZmlsbD0idXJsKCNza3kpIi8+CiAgPGcgb3BhY2l0eT0iLjUiIGZpbGw9IiNmZmYiPjxjaXJjbGUgY3g9IjExMCIgY3k9IjU1IiByPSIxLjMiLz48Y2lyY2xlIGN4PSIzNzAiIGN5PSI3MiIgcj0iMS41Ii8+PGNpcmNsZSBjeD0iNjQwIiBjeT0iMjIiIHI9IjEuMiIvPjxjaXJjbGUgY3g9Ijk1NSIgY3k9IjMyIiByPSIxLjQiLz48Y2lyY2xlIGN4PSIxMjUwIiBjeT0iMzgiIHI9IjEuMiIvPjxjaXJjbGUgY3g9IjIzMCIgY3k9IjI4IiByPSIuOSIvPjxjaXJjbGUgY3g9IjgxMCIgY3k9IjUwIiByPSIuOSIvPjxjaXJjbGUgY3g9IjEzODUiIGN5PSI4NSIgcj0iMSIvPjwvZz4KICA8ZWxsaXBzZSBjeD0iNzIwIiBjeT0iNDkwIiByeD0iMjAwIiByeT0iMTgwIiBmaWxsPSJ1cmwoI3N1bikiIG9wYWNpdHk9Ii43Ii8+CiAgPGNpcmNsZSBjeD0iNzIwIiBjeT0iNDkwIiByPSIzMiIgZmlsbD0iI2ZmZjhlMCIgb3BhY2l0eT0iLjkyIi8+CiAgPHBhdGggZD0iTS0xMCA1NDAgTDYwIDQwMCBMMTYwIDM3MCBMMjcwIDMyMCBMMzgwIDI5NSBMNDkwIDI4MCBMNjAwIDI1MCBMNzEwIDIzMCBMODIwIDI0MCBMOTMwIDIxNSBMMTA0MCAyMjUgTDExNTAgMjk1IEwxMjYwIDMwMCBMMTQ2MCAzMTAgTDE0NjAgODEwIEwtMTAgODEwWiIgZmlsbD0idXJsKCNtMSkiIG9wYWNpdHk9Ii43MiIvPgogIDxwYXRoIGQ9Ik0tMTAgNjEwIEw4MCA1MDAgTDIxMCA0NzAgTDM1MCA0NDUgTDQ5MCA0MzAgTDYzMCA0MTUgTDc2MCA0MjAgTDkwMCA0MDAgTDEwNDAgNDA4IEwxMTgwIDQxNSBMMTMyMCA0MjAgTDE0NjAgNDMwIEwxNDYwIDgxMCBMLTEwIDgxMFoiIGZpbGw9InVybCgjbTIpIiBvcGFjaXR5PSIuODgiLz4KICA8cGF0aCBkPSJNLTEwIDY4MCBMNjAgNjMwIEwyNDAgNjIwIEw0NDAgNjE1IEw2NDAgNjEwIEw3MjAgNjMwIEw5MDAgNjA4IEwxMTAwIDYzMiBMMTMwMCA2MzggTDE0NjAgNjM1IEwxNDYwIDgxMCBMLTEwIDgxMFoiIGZpbGw9InVybCgjbTMpIiBvcGFjaXR5PSIuOTUiLz4KICA8cGF0aCBkPSJNLTEwIDc1MCBRNDAwIDc0MiA4MDAgNzM4IFExMjAwIDc0MCAxNDYwIDczOCBMMTQ2MCA4MTAgTC0xMCA4MTBaIiBmaWxsPSJ1cmwoI3N2KSIvPgogIDxwYXRoIGQ9Ik01ODAgODEwIEw2OTUgNTYwIEw3NTAgNTYwIEw4NjUgODEwWiIgZmlsbD0idXJsKCNyZCkiLz4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNjUsNTcwKSI+PHJlY3QgeD0iLTUiIHk9IjY1IiB3aWR0aD0iOSIgaGVpZ2h0PSIxMTUiIGZpbGw9IiMxNTBkMDAiIHJ4PSIzIi8+PGVsbGlwc2UgY3g9Ii0xMiIgY3k9IjYyIiByeD0iNjgiIHJ5PSIxOSIgZmlsbD0iIzEzMmUwYSIgb3BhY2l0eT0iLjk2Ii8+PGVsbGlwc2UgY3g9IjUiIGN5PSI1NSIgcng9IjU1IiByeT0iMTYiIGZpbGw9IiMxNzM1MTAiIG9wYWNpdHk9Ii44OCIvPjwvZz4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjg1LDU0NSkiPjxyZWN0IHg9Ii01IiB5PSI4MCIgd2lkdGg9IjkiIGhlaWdodD0iMTM1IiBmaWxsPSIjMTUwZDAwIiByeD0iMyIvPjxlbGxpcHNlIGN4PSIwIiBjeT0iNzUiIHJ4PSI4MiIgcnk9IjIzIiBmaWxsPSIjMTMyZTBhIiBvcGFjaXR5PSIuOTYiLz48ZWxsaXBzZSBjeD0iMzAiIGN5PSI4MCIgcng9IjUyIiByeT0iMTciIGZpbGw9IiMwZjI4MGEiIG9wYWNpdHk9Ii44MiIvPjwvZz4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4NTUsNjYwKSIgb3BhY2l0eT0iLjgyIj48cmVjdCB4PSIwIiB5PSIyMiIgd2lkdGg9Ijk1IiBoZWlnaHQ9IjM2IiByeD0iNCIgZmlsbD0iIzBhMGYyMiIvPjxyZWN0IHg9IjEyIiB5PSI4IiB3aWR0aD0iNTgiIGhlaWdodD0iMjQiIHJ4PSIzIiBmaWxsPSIjMGQxMzI4Ii8+PGNpcmNsZSBjeD0iMjAiIGN5PSI2MCIgcj0iMTEiIGZpbGw9IiMwZDEyMjgiLz48Y2lyY2xlIGN4PSI3NSIgY3k9IjYwIiByPSIxMSIgZmlsbD0iIzBkMTIyOCIvPjxlbGxpcHNlIGN4PSI5NyIgY3k9IjM0IiByeD0iNiIgcnk9IjQiIGZpbGw9IiNmNWE2MjMiIG9wYWNpdHk9Ii41Ii8+PC9nPgogIDxyZWN0IHdpZHRoPSIxNDQwIiBoZWlnaHQ9IjgxMCIgZmlsbD0iIzA3MDkxZSIgb3BhY2l0eT0iLjUwIi8+Cjwvc3ZnPg==");background-size:cover;background-position:center}
 .hero-right::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,var(--black) 0%,transparent 28%)}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(217,119,6,.14);border:1px solid rgba(217,119,6,.3);color:var(--orange);padding:.35rem .85rem;border-radius:20px;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.5rem;width:fit-content}
-.h1-break{display:inline}.hero h1{font-family:var(--fh);font-size:clamp(2.4rem,5vw,3.8rem);font-weight:900;color:#fff;line-height:1.03;margin-bottom:.95rem;letter-spacing:-.02em}
+.hero h1{font-family:var(--fh);font-size:clamp(2.4rem,5vw,3.8rem);font-weight:900;color:#fff;line-height:1.03;margin-bottom:.95rem;letter-spacing:-.02em}
 .hero h1 span{color:var(--orange)}
 .hero-sub{font-size:1rem;color:rgba(255,255,255,.75);line-height:1.75;max-width:400px;margin-bottom:2.5rem}
 .hero-trust{display:flex;flex-direction:column;gap:.55rem;margin-top:1.5rem}
@@ -476,7 +747,7 @@ button,input,select,textarea{font-family:var(--f)}
 <section class="hero" aria-label="Homepage hero">
   <div class="hero-left">
     <div class="hero-eyebrow">&#9992; Kampala, Uganda &middot; Est. 2010</div>
-    <h1>Your ride <span class='h1-break'><br></span>across <span>Uganda</span></h1>
+    <h1>Your ride<br>across <span>Uganda</span></h1>
     <p class="hero-sub">Airport transfers, safaris, city tours and car hire. No tourist pricing &mdash; ever.</p>
 
     <div class="bw" role="search" aria-label="Quick booking">
