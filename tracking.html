@@ -401,6 +401,7 @@ document.addEventListener('click',function(e){if(!e.target.closest('.navbar')){u
       <h2>Find your booking</h2>
       <p>Enter the booking reference from your WhatsApp confirmation message (e.g. <strong>MT-2026-0042</strong>), or enter the phone number you booked with.</p>
       <div class="lookup-row">
+        <label for="refInput" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">Booking reference or phone number</label>
         <input id="refInput" type="text" class="inp" placeholder="MT-2026-0042 or your phone number" autocomplete="off">
         <button class="lookup-btn" onclick="lookupBooking()">Track →</button>
       </div>
