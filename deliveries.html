@@ -2,25 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Book your Uganda car hire, airport transfer or safari with Mugabo Travels. Online 5-step booking with instant WhatsApp confirmation. No upfront payment.">
+<meta name="description" content="Mugabo Travels Package Delivery — reliable same-day and intercity package delivery across Uganda. Documents, parcels, luggage and more. Get a WhatsApp quote in minutes.">
 <meta name="theme-color" content="#1c0a04">
-<meta property="og:title" content="Book a Trip — Uganda Car Hire &amp; Transfers | Mugabo Travels &amp; Car Hire">
-<meta property="og:description" content="Book your Uganda car hire, airport transfer or safari with Mugabo Travels. Online 5-step booking with instant WhatsApp confirmation. No upfront payment.">
+<meta property="og:title" content="Package Deliveries — Uganda | Mugabo Travels &amp; Car Hire">
+<meta property="og:description" content="Reliable same-day and intercity package delivery across Uganda. Documents, parcels, luggage. Get a WhatsApp quote fast.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://mugabotravels.com/og-image.jpg">
 <meta property="og:site_name" content="Mugabo Travels &amp; Car Hire">
 <meta name="twitter:card" content="summary_large_image">
-<title>Book a Trip — Uganda Car Hire &amp; Transfers | Mugabo Travels &amp; Car Hire</title>
+<title>Package Deliveries — Uganda | Mugabo Travels &amp; Car Hire</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"TravelAgency","name":"Mugabo Travels & Car Hire",
-"description":"Uganda trusted car hire, airport transfers, safaris and city tours since 2010.",
-"url":"https://mugabotravels.com","telephone":"+256706689064",
-"address":{"@type":"PostalAddress","addressLocality":"Kampala","addressCountry":"UG"},
-"openingHours":"Mo-Su 00:00-24:00","priceRange":"$$",
-"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"127"}}
-</script>
 <style>
 
 /* ══════════════════════════════════════════════
@@ -28,8 +20,9 @@
    Black · Yellow · Red  (Ugandan national colours)
    ══════════════════════════════════════════════ */
 :root {
-  --ug-green:#1a472a;
-  --ug-amber:#F59E0B;
+  --ug-green:  #1a472a;
+  --ug-green-m:#276237;
+  --ug-amber:  #F59E0B;
   --ug-amber-d:#D97706;
 
   --navy:        #8B0000;   /* deep crimson — secondary brand */
@@ -56,6 +49,7 @@
 
   /* Uganda flag stripe references */
   --ug-black:    #111111;
+  --ug-amber:    #F59E0B;
   --ug-yellow:   #FCDC04;
   --ug-red:      #D90000;
 }
@@ -65,8 +59,8 @@
   background: rgba(26,71,42,.98) !important;
   border-bottom: 2px solid var(--ug-amber, #F59E0B) !important;
 }
-.nav-brand img { border-color: var(--ug-yellow) !important; }
-.brand-main em { color: var(--ug-yellow) !important; }
+.nav-brand img { border-color: var(--ug-amber, #F59E0B) !important; }
+.brand-main em { color: var(--ug-amber, #F59E0B) !important; }
 .brand-sub { color: rgba(255,255,255,.6) !important; }
 .nav-links a { color: rgba(255,255,255,.65) !important; }
 .nav-links a:hover,
@@ -78,9 +72,9 @@
   border: 1.5px solid var(--ug-yellow) !important;
 }
 .nav-links .nav-book {
-  background: var(--ug-red) !important;
-  color: #fff !important;
-  box-shadow: 0 3px 14px rgba(217,0,0,.4) !important;
+  background: var(--ug-amber, #F59E0B) !important;
+  color: #1a1a1a !important;
+  box-shadow: 0 3px 14px rgba(245,158,11,.4) !important;
   border-color: var(--ug-red) !important;
 }
 .nav-links .nav-book:hover { background: #B00000 !important; }
@@ -96,9 +90,9 @@
 .hero-eyebrow {
   background: rgba(252,220,4,.15) !important;
   border-color: rgba(252,220,4,.35) !important;
-  color: var(--ug-yellow) !important;
+  color: var(--ug-amber, #F59E0B) !important;
 }
-.hero h1 span { color: var(--ug-yellow) !important; }
+.hero h1 span { color: var(--ug-amber, #F59E0B) !important; }
 .tp-dot { background: var(--ug-yellow) !important; }
 
 /* ── BOOKING WIDGET — clean white card on black ── */
@@ -110,7 +104,7 @@
 }
 .bw-field:focus-within {
   border-color: var(--ug-red) !important;
-  box-shadow: 0 0 0 3px rgba(217,0,0,.12) !important;
+  box-shadow: 0 0 0 3px rgba(245,158,11,.12) !important;
 }
 .bw-dt:focus-within { border-color: var(--ug-red) !important; }
 .bw-return:hover { border-color: var(--ug-red) !important; color: var(--ug-red) !important; }
@@ -131,7 +125,7 @@
 .btn-dark:hover { background: #2a2a2a !important; }
 .btn-o {
   background: var(--ug-yellow) !important;
-  border-color: var(--ug-yellow) !important;
+  border-color: var(--ug-amber, #F59E0B) !important;
   color: var(--ug-black) !important;
   font-weight: 800 !important;
 }
@@ -160,19 +154,19 @@ button.btn-o { background: var(--ug-red) !important; border-color: var(--ug-red)
 
 /* ── PAGE HERO ── */
 .page-hero { background: var(--ug-green, #1a472a) !important; border-bottom: 4px solid var(--ug-yellow) !important; }
-.page-hero::before { background: radial-gradient(ellipse at 50% 110%,rgba(217,0,0,.18),transparent 60%) !important; }
-.page-hero h1 span { color: var(--ug-yellow) !important; }
+.page-hero::before { background: radial-gradient(ellipse at 50% 110%,rgba(245,158,11,.18),transparent 60%) !important; }
+.page-hero h1 span { color: var(--ug-amber, #F59E0B) !important; }
 .page-hero p { color: rgba(255,255,255,.75) !important; }
 .ph-slice { background: #fff !important; }
 .ph-slice-alt { background: var(--off-white) !important; }
 
 /* ── ABOUT PAGE ── */
 .fc-bg { background: linear-gradient(155deg,#8B0000 0%,#5a0000 40%,#111111 100%) !important; }
-.fc-quote-card { border-left-color: var(--ug-yellow) !important; }
+.fc-quote-card { border-left-color: var(--ug-amber, #F59E0B) !important; }
 .fc-tag {
   background: rgba(252,220,4,.18) !important;
   border-color: rgba(252,220,4,.35) !important;
-  color: var(--ug-yellow) !important;
+  color: var(--ug-amber, #F59E0B) !important;
 }
 .reggane-msg::before { background: var(--ug-red) !important; color: #fff !important; }
 .lead-q { border-left-color: var(--ug-red) !important; }
@@ -194,7 +188,7 @@ button.btn-o { background: var(--ug-red) !important; border-color: var(--ug-red)
 /* ── STATS STRIP ── */
 .stats-strip { background: var(--ug-green, #1a472a) !important; border-top: 3px solid var(--ug-yellow) !important; border-bottom: 3px solid var(--ug-yellow) !important; }
 .stats-strip .sw { border: none !important; padding: 2.5rem 0 !important; }
-.sn { color: var(--ug-yellow) !important; }
+.sn { color: var(--ug-amber, #F59E0B) !important; }
 .sl { color: rgba(255,255,255,.7) !important; }
 
 /* ── TRUST BADGES ── */
@@ -203,7 +197,7 @@ button.btn-o { background: var(--ug-red) !important; border-color: var(--ug-red)
 
 /* ── TESTIMONIALS ── */
 .t-card:hover { border-color: var(--ug-red) !important; }
-.t-stars { color: var(--ug-yellow) !important; }
+.t-stars { color: var(--ug-amber, #F59E0B) !important; }
 .t-av { background: var(--ug-green, #1a472a) !important; border: 2px solid var(--ug-yellow) !important; }
 
 /* ── SECTION TAGS ── */
@@ -216,12 +210,12 @@ button.btn-o { background: var(--ug-red) !important; border-color: var(--ug-red)
 
 /* ── CTA BAND ── */
 .cta-band { background: var(--ug-green, #1a472a) !important; border-top: none !important; }
-.cta-band h2 { color: var(--ug-yellow) !important; }
+.cta-band h2 { color: var(--ug-amber, #F59E0B) !important; }
 .cta-band p { color: rgba(255,255,255,.7) !important; }
 .cta-band .btn-dark {
   background: var(--ug-yellow) !important;
   color: var(--ug-black) !important;
-  border-color: var(--ug-yellow) !important;
+  border-color: var(--ug-amber, #F59E0B) !important;
   font-weight: 800 !important;
 }
 .cta-band .btn-dark:hover { background: #E8C800 !important; }
@@ -230,18 +224,18 @@ button.btn-o { background: var(--ug-red) !important; border-color: var(--ug-red)
   color: #fff !important;
   border-color: rgba(255,255,255,.3) !important;
 }
-.cta-band .btn-out:hover { border-color: var(--ug-yellow) !important; color: var(--ug-yellow) !important; }
+.cta-band .btn-out:hover { border-color: var(--ug-amber, #F59E0B) !important; color: var(--ug-amber, #F59E0B) !important; }
 
 /* ── FOOTER ── */
 .site-footer {
   background: #0a1f10 !important;
   border-top: 4px solid #F59E0B !important;
 }
-.footer-brand em { color: var(--ug-yellow) !important; }
-.site-footer h4 { color: var(--ug-yellow) !important; }
-.site-footer a:hover { color: var(--ug-yellow) !important; }
+.footer-brand em { color: var(--ug-amber, #F59E0B) !important; }
+.site-footer h4 { color: var(--ug-amber, #F59E0B) !important; }
+.site-footer a:hover { color: var(--ug-amber, #F59E0B) !important; }
 .f-bottom { border-top-color: rgba(252,220,4,.2) !important; }
-.f-bottom strong { color: var(--ug-yellow) !important; }
+.f-bottom strong { color: var(--ug-amber, #F59E0B) !important; }
 
 /* ── WA FAB ── stays green ── */
 /* ── TRACKING ── */
@@ -251,12 +245,12 @@ button.btn-o { background: var(--ug-red) !important; border-color: var(--ug-red)
 .svc-big:hover { border-color: var(--ug-red) !important; }
 .svc-big-icon { background: rgba(217,0,0,.08) !important; border-color: rgba(217,0,0,.15) !important; }
 .svc-big:hover .svc-big-icon { background: var(--ug-green, #1a472a) !important; }
-.fleet-card:hover { border-color: var(--ug-yellow) !important; }
+.fleet-card:hover { border-color: var(--ug-amber, #F59E0B) !important; }
 .fv-top { background: var(--ug-green, #1a472a) !important; }
 .fv-badge {
   background: rgba(252,220,4,.2) !important;
   border-color: rgba(252,220,4,.35) !important;
-  color: var(--ug-yellow) !important;
+  color: var(--ug-amber, #F59E0B) !important;
 }
 
 /* ── PHOTO GRID ── */
@@ -266,13 +260,13 @@ button.btn-o { background: var(--ug-red) !important; border-color: var(--ug-red)
 
 /* ── CONTACT ── */
 .ct-card, .contact-info-card, .cic { background: var(--ug-green, #1a472a) !important; border: 1px solid rgba(252,220,4,.2) !important; }
-.ct-card h3, .contact-info-card h3 { color: var(--ug-yellow) !important; }
+.ct-card h3, .contact-info-card h3 { color: var(--ug-amber, #F59E0B) !important; }
 .cdi, .cd-icon { background: rgba(252,220,4,.15) !important; }
 .wa-link2:hover,.wa-l2:hover { opacity:.88; }
 
 /* ── DARK SECTION ── */
 .section.dark { background: var(--ug-green, #1a472a) !important; }
-.section.dark .st { color: var(--ug-yellow) !important; }
+.section.dark .st { color: var(--ug-amber, #F59E0B) !important; }
 
 /* ── TRACKING TIMELINE ── */
 .tl-step.active .tl-icon {
@@ -634,123 +628,90 @@ button,input,select,textarea{font-family:var(--f)}
   .section.sm{padding:2rem 1rem}
   .footer-inner{grid-template-columns:1fr}
 }
-
-/* ── JOURNEY TYPE SELECTOR ── */
-.journey-type-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:.2rem}
-.jt-btn{display:flex;flex-direction:column;align-items:center;gap:.25rem;padding:1rem .75rem;border:2px solid var(--bdr);border-radius:10px;background:#fff;cursor:pointer;transition:all .22s;font-family:var(--f);text-align:center}
-.jt-btn:hover{border-color:var(--ug-red);background:rgba(217,0,0,.03)}
-.jt-btn.active{border-color:var(--ug-red)!important;background:rgba(217,0,0,.06)!important;box-shadow:0 0 0 3px rgba(217,0,0,.12)}
-.jt-icon{font-size:1.4rem;line-height:1}
-.jt-label{font-size:.88rem;font-weight:700;color:var(--black)}
-.jt-btn.active .jt-label{color:var(--ug-red)}
-.jt-sub{font-size:.71rem;color:var(--gray-lt);font-weight:400}
-
-/* ── BUDGET FIELD ── */
-.budget-field{margin-top:.5rem}
-.budget-opt{font-weight:400;color:var(--gray-lt);font-size:.72rem;margin-left:.3rem}
-.budget-input-wrap{display:flex;align-items:center;border:1.5px solid var(--bdr);border-radius:8px;overflow:hidden;transition:border-color .2s,box-shadow .2s}
-.budget-input-wrap:focus-within{border-color:var(--ug-red);box-shadow:0 0 0 3px rgba(217,0,0,.1)}
-.budget-currency{padding:0 .85rem;font-size:.8rem;font-weight:700;color:var(--gray);background:var(--off-white);border-right:1.5px solid var(--bdr);min-height:48px;display:flex;align-items:center;flex-shrink:0;letter-spacing:.03em}
-.budget-inp{border:none!important;box-shadow:none!important;border-radius:0!important;flex:1;min-height:48px}
-.budget-inp:focus{box-shadow:none!important}
-.budget-hint{margin-top:.55rem;font-size:.76rem;color:var(--gray);line-height:1.55;background:rgba(252,220,4,.1);border:1px solid rgba(252,220,4,.3);border-radius:7px;padding:.6rem .85rem}
-#ret-date-group.has-error .inp{border-color:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.1)}
-#ret-date-group.has-error .field-error{display:block}
-
-/* ── v13: 3-step redesign extras ── */
-.veh-suggested-badge{display:inline-block;background:rgba(252,220,4,.2);border:1px solid rgba(252,220,4,.4);color:#555;font-size:.68rem;font-weight:700;padding:.15rem .55rem;border-radius:20px;margin-left:.5rem;letter-spacing:.03em;vertical-align:middle}
-.veh-card.suggested{border-color:var(--ug-yellow);background:rgba(252,220,4,.07)}
-.veh-card.suggested .veh-suggested-badge{display:inline-block}
-.veh-card:not(.suggested) .veh-suggested-badge{display:none}
-.pax-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:.9rem}
-.step3-send-wrap{margin-top:1.5rem;padding-top:1.25rem;border-top:2px solid var(--bdr)}
-.mini-summary{background:var(--off-white);border:1px solid var(--bdr);border-radius:10px;padding:1rem 1.25rem;margin-bottom:1.25rem;font-size:.82rem}
-.mini-summary h5{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-lt);margin-bottom:.6rem}
-.mini-sum-grid{display:grid;grid-template-columns:1fr 1fr;gap:.3rem .75rem}
-.ms-row{display:flex;flex-direction:column;gap:.05rem}
-.ms-key{font-size:.68rem;color:var(--gray);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
-.ms-val{font-size:.82rem;color:var(--black);font-weight:600}
-@media(max-width:480px){.mini-sum-grid{grid-template-columns:1fr}.pax-row{grid-template-columns:1fr}}
-.form-success{display:none;text-align:center;padding:2rem 1rem}
-.form-success.visible{display:block}
-.form-success h3{font-family:var(--fh);font-size:1.5rem;color:var(--black);margin-bottom:.5rem}
-.form-success p{color:var(--gray);font-size:.9rem;line-height:1.7}
-
 </style>
 <style>
-.bk-hero{background:var(--navy-d);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden}
-.bk-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 120%,rgba(217,119,6,.15),transparent 70%)}
-.bk-hero h1{font-family:var(--fh);font-size:clamp(1.75rem,4vw,2.6rem);font-weight:900;color:#fff;position:relative;letter-spacing:-.02em;margin-bottom:.5rem}
-.bk-hero h1 span{color:var(--orange)}.bk-hero p{color:rgba(255,255,255,.75);position:relative;font-size:.95rem}
-.bk-slice{height:40px;background:#fff;clip-path:polygon(0 50%,100% 0,100% 100%,0 100%)}
-
-/* STEPPER */
-.stepper{display:flex;align-items:center;justify-content:center;margin:2rem auto 2.5rem;max-width:600px;padding:0 1rem}
-.step{display:flex;flex-direction:column;align-items:center;gap:.3rem;flex:1;position:relative}
-.step::before{content:"";position:absolute;top:18px;left:50%;right:-50%;height:2px;background:var(--bdr);z-index:0}
-.step:last-child::before{display:none}
-.step-num{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:700;z-index:1;transition:all .3s;border:2px solid var(--bdr);background:#fff;color:var(--gray-lt)}
-.step.active .step-num{border-color:var(--orange);background:var(--orange);color:#fff}
-.step.done .step-num{border-color:var(--black);background:var(--black);color:#fff}
-.step.done::before{background:var(--black)}
-.step-label{font-size:.63rem;font-weight:600;color:var(--gray-lt);text-transform:uppercase;letter-spacing:.05em;text-align:center}
-.step.active .step-label{color:var(--orange)}.step.done .step-label{color:var(--black)}
-@media(max-width:480px){.step-label{display:none}}
-
-/* BOOKING CARD */
-.bk-wrap{max-width:780px;margin:0 auto;padding:0 1.25rem 4rem}
-.bk-card{background:#fff;border-radius:var(--rl);border:1px solid var(--bdr);box-shadow:0 8px 40px rgba(28,10,4,.1);overflow:hidden}
-.bk-card-head{background:var(--navy-d);padding:1.25rem 1.75rem;display:flex;align-items:center;gap:.75rem}
-.bk-card-head h2{font-family:var(--fh);font-size:1.2rem;color:#fff;font-weight:700}
-.step-badge{background:var(--orange);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:800;flex-shrink:0}
-.bk-body{padding:1.75rem}
-.bk-panel{display:none}.bk-panel.active{display:block}
-
-/* TRIP TYPE CARDS */
-.trip-types{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1.5rem}
-.tt-card{border:2px solid var(--bdr);border-radius:var(--r);padding:1.1rem .75rem;text-align:center;cursor:pointer;transition:all .22s;background:#fff;-webkit-tap-highlight-color:transparent}
-.tt-card:hover{border-color:var(--orange);background:var(--orange-lt)}
-.tt-card.selected{border-color:var(--orange);background:var(--orange-lt);box-shadow:0 0 0 3px rgba(217,119,6,.2)}
-.tt-icon{font-size:1.75rem;margin-bottom:.4rem}.tt-label{font-size:.78rem;font-weight:700;color:var(--black)}
-@media(max-width:420px){.trip-types{grid-template-columns:1fr 1fr}}
-
-/* VEHICLE CARDS */
-.veh-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin-bottom:1.5rem}
-.veh-card{border:2px solid var(--bdr);border-radius:var(--r);padding:1.1rem;cursor:pointer;transition:all .22s;background:#fff}
-.veh-card:hover{border-color:var(--orange);background:var(--orange-lt)}
-.veh-card.selected{border-color:var(--orange);background:var(--orange-lt);box-shadow:0 0 0 3px rgba(217,119,6,.2)}
-.veh-icon{font-size:1.75rem;margin-bottom:.4rem}.veh-name{font-weight:700;font-size:.9rem;color:var(--black);margin-bottom:.15rem}.veh-cap{font-size:.75rem;color:var(--gray)}
-@media(max-width:420px){.veh-grid{grid-template-columns:1fr}}
-
-/* SUMMARY */
-.summary-box{background:var(--off-white);border-radius:var(--r);padding:1.25rem;border:1px solid var(--bdr);margin-bottom:1.5rem}
-.summary-box h4{font-weight:700;font-size:.82rem;color:var(--black);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.75rem}
-.sum-row{display:flex;justify-content:space-between;align-items:center;padding:.35rem 0;border-bottom:1px solid var(--bdr);font-size:.86rem}
-.sum-row:last-child{border-bottom:none;font-weight:700;font-size:.9rem;padding-top:.6rem}
-.sum-key{color:var(--gray)}.sum-val{color:var(--black);font-weight:600;text-align:right}
-
-/* WA CONFIRM BTN */
-.wa-confirm-btn{background:var(--green);color:#fff;border:none;cursor:pointer;width:100%;padding:1rem;border-radius:10px;font-family:var(--f);font-size:1rem;font-weight:800;display:flex;align-items:center;justify-content:center;gap:.6rem;min-height:56px;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:all .22s}
-.wa-confirm-btn:hover{opacity:.9;transform:translateY(-1px)}
-
-/* NAV BTNS */
-.bk-nav{display:flex;justify-content:space-between;align-items:center;margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--bdr);gap:.75rem}
-.bk-nav .btn{min-width:120px}
-
-/* GEO BTN */
-.geo-btn{display:flex;align-items:center;gap:.5rem;background:var(--off-white);border:1.5px solid var(--bdr);border-radius:8px;padding:.78rem 1rem;cursor:pointer;font-family:var(--f);font-size:.88rem;color:var(--black);font-weight:600;transition:all .22s;width:100%;margin-top:.5rem;min-height:48px}
-.geo-btn:hover{border-color:var(--orange);background:var(--orange-lt)}
-.geo-status{font-size:.75rem;color:var(--gray);margin-top:.4rem;display:none}
-.bk-note{background:var(--off-white);border-radius:var(--r);padding:1.25rem;color:var(--gray-dk);font-size:.82rem;line-height:1.7;margin-top:1.25rem;border:1px solid var(--bdr)}
-.bk-note strong{color:var(--orange);display:block;margin-bottom:.4rem}
-
-/* WA NOTE */
-.wa-note{background:#f0fdf4;border:1px solid #86efac;border-radius:var(--r);padding:1.1rem 1.25rem;display:flex;align-items:flex-start;gap:.85rem;font-size:.83rem;color:var(--gray-dk);line-height:1.65;margin-bottom:1.25rem}
-.wa-note svg{flex-shrink:0;margin-top:.1rem}
+/* ── DELIVERIES PAGE SPECIFIC ── */
+.del-hero{background:linear-gradient(135deg,#0f2d1a 0%,#1a472a 60%,#276237 100%);padding:4.5rem 1.5rem 0;position:relative;overflow:hidden}
+.del-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 110%,rgba(245,158,11,.18),transparent 55%);pointer-events:none}
+.del-hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;position:relative}
+.del-hero-text{padding-bottom:4rem}
+.del-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,158,11,.18);border:1px solid rgba(245,158,11,.35);color:#F59E0B;padding:.35rem .85rem;border-radius:20px;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.25rem;width:fit-content}
+.del-hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:900;color:#fff;line-height:1.06;margin-bottom:1rem;letter-spacing:-.02em}
+.del-hero h1 span{color:#F59E0B}
+.del-hero p{color:rgba(255,255,255,.8);font-size:1.05rem;line-height:1.8;margin-bottom:2rem;max-width:480px}
+.del-trust-row{display:flex;gap:1.5rem;flex-wrap:wrap}
+.del-trust-item{display:flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.75);font-size:.83rem}
+.del-trust-dot{width:6px;height:6px;background:#F59E0B;border-radius:50%;flex-shrink:0}
+.del-form-card{background:rgba(15,15,15,.95);border:1px solid rgba(245,158,11,.2);border-radius:20px;padding:2rem;margin-bottom:-2px;box-shadow:0 24px 64px rgba(0,0,0,.5)}
+.del-form-card h2{font-family:'Playfair Display',Georgia,serif;font-size:1.35rem;font-weight:700;color:#fff;margin-bottom:.3rem}
+.del-form-card .sub{font-size:.82rem;color:rgba(255,255,255,.45);margin-bottom:1.5rem}
+.del-fg{margin-bottom:.85rem}
+.del-fg label{display:block;font-size:.68rem;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.4rem}
+.del-inp,.del-sel,.del-txta{width:100%;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:9px;padding:.82rem 1rem;color:#fff;font-family:inherit;font-size:.93rem;outline:none;transition:border-color .2s,box-shadow .2s;min-height:48px}
+.del-inp::placeholder{color:rgba(255,255,255,.3)}
+.del-inp:focus,.del-sel:focus,.del-txta:focus{border-color:#F59E0B;box-shadow:0 0 0 3px rgba(245,158,11,.14)}
+.del-sel{cursor:pointer;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath stroke='rgba(255,255,255,.4)' stroke-width='1.5' fill='none' d='M1 1l5 4 5-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .9rem center;background-color:rgba(255,255,255,.06);padding-right:2.5rem;color:#fff}
+.del-sel option{background:#1a1a1a;color:#fff}
+.del-txta{resize:vertical;min-height:90px}
+.del-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.del-btn{width:100%;background:#16A34A;color:#fff;border:none;padding:1.1rem;border-radius:10px;font-family:inherit;font-size:1rem;font-weight:800;cursor:pointer;transition:all .22s;display:flex;align-items:center;justify-content:center;gap:.6rem;min-height:54px;letter-spacing:.01em;margin-top:.25rem}
+.del-btn:hover{background:#15803D;transform:translateY(-1px);box-shadow:0 6px 24px rgba(22,163,74,.4)}
+.del-note{font-size:.72rem;color:rgba(255,255,255,.3);text-align:center;margin-top:.65rem;line-height:1.55}
+/* How it works */
+.how-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:2.5rem}
+.how-card{background:#fff;border:1px solid #E0E0E0;border-radius:14px;padding:1.75rem 1.5rem;text-align:center;transition:all .25s}
+.how-card:hover{border-color:#F59E0B;box-shadow:0 8px 32px rgba(245,158,11,.12);transform:translateY(-3px)}
+.how-num{width:44px;height:44px;background:linear-gradient(135deg,#1a472a,#276237);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;font-weight:900;color:#F59E0B;margin:0 auto 1rem}
+.how-card h3{font-size:.95rem;font-weight:700;color:#1a1a1a;margin-bottom:.45rem}
+.how-card p{font-size:.82rem;color:#555;line-height:1.65}
+/* What we deliver */
+.what-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:2rem}
+.what-item{background:#F7FAF8;border:1.5px solid #D1FAE5;border-radius:12px;padding:1.25rem 1rem;text-align:center;transition:all .2s}
+.what-item:hover{border-color:#1a472a;background:#e6f4ea}
+.what-icon{font-size:2rem;display:block;margin-bottom:.6rem}
+.what-item h4{font-size:.82rem;font-weight:700;color:#1a472a;margin-bottom:.2rem}
+.what-item p{font-size:.72rem;color:#555;line-height:1.5}
+/* Pricing */
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:2rem}
+.price-card{background:#fff;border:2px solid #E0E0E0;border-radius:16px;padding:2rem 1.5rem;position:relative;transition:all .25s}
+.price-card.featured{border-color:#F59E0B;background:linear-gradient(135deg,#fffdf7,#fff)}
+.price-card.featured::before{content:'Most popular';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#F59E0B;color:#1a1a1a;font-size:.65rem;font-weight:800;padding:.25rem .85rem;border-radius:20px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.price-card h3{font-size:1rem;font-weight:700;color:#1a1a1a;margin-bottom:.25rem}
+.price-card .price-note{font-size:.75rem;color:#666;margin-bottom:1rem}
+.price-card ul{list-style:none;margin-bottom:1.25rem}
+.price-card ul li{font-size:.82rem;color:#444;padding:.3rem 0;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;gap:.5rem}
+.price-card ul li:last-child{border-bottom:none}
+.price-card ul li::before{content:'✓';color:#1a472a;font-weight:700;flex-shrink:0}
+.price-tag{font-size:1.4rem;font-weight:900;color:#1a472a;font-family:'Playfair Display',Georgia,serif}
+.price-card .btn-quote{display:block;width:100%;padding:.8rem;background:#1a472a;color:#fff;border:none;border-radius:9px;font-family:inherit;font-size:.88rem;font-weight:700;cursor:pointer;transition:all .2s;text-align:center}
+.price-card.featured .btn-quote{background:#F59E0B;color:#1a1a1a}
+.price-card .btn-quote:hover{opacity:.88;transform:translateY(-1px)}
+/* Coverage map teaser */
+.coverage-strip{background:linear-gradient(135deg,#0f2d1a,#1a472a);padding:3.5rem 1.5rem;text-align:center}
+.coverage-cities{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;margin-top:1.5rem}
+.city-pill{background:rgba(255,255,255,.1);border:1px solid rgba(245,158,11,.3);color:rgba(255,255,255,.85);padding:.4rem 1rem;border-radius:20px;font-size:.78rem;font-weight:600}
+/* Testimonial mini */
+.del-t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:2rem}
+.del-t-card{background:#fff;border:1px solid #E0E0E0;border-radius:12px;padding:1.4rem}
+.del-t-stars{color:#F59E0B;font-size:.9rem;margin-bottom:.6rem}
+.del-t-text{font-size:.85rem;color:#333;font-style:italic;line-height:1.7;margin-bottom:.9rem}
+.del-t-auth{font-size:.78rem;font-weight:700;color:#1a472a}
+@media(max-width:900px){
+  .del-hero-inner{grid-template-columns:1fr}
+  .del-hero-text{padding-bottom:0}
+  .del-form-card{margin-bottom:2rem}
+  .del-row{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .del-hero{padding:3rem 1rem 0}
+  .del-form-card{padding:1.4rem}
+  .del-trust-row{flex-direction:column;gap:.65rem}
+}
 </style>
 </head>
 <body>
-<a href="#main-content" class="skip-link">Skip to main content</a>
+<a href="#main" class="skip-link">Skip to content</a>
+
 <header class="site-header" role="banner">
   <nav class="navbar" aria-label="Main navigation">
     <a href="index.html" class="nav-brand" aria-label="Mugabo Travels home">
@@ -763,8 +724,8 @@ button,input,select,textarea{font-family:var(--f)}
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="tracking.html">Track Trip</a></li>
-      <li><a href="deliveries.html">Deliveries</a></li>
-      <li><a href="booking.html" class="nav-book" aria-current="page">Book Now</a></li>
+      <li><a href="deliveries.html" aria-current="page">Deliveries</a></li>
+      <li><a href="booking.html" class="nav-book">Book Now</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -776,454 +737,260 @@ document.addEventListener('click',function(e){if(!e.target.closest('.navbar')){u
 })();
 </script>
 
-<main id="main-content">
-<div class="bk-hero">
-  <h1>Book your <span>Uganda Trip</span></h1>
-  <p>3 quick steps &mdash; we'll confirm via WhatsApp within the hour.</p>
-</div>
-<div class="bk-slice"></div>
+<main id="main">
 
-<section style="padding-top:1.5rem;padding-bottom:0;padding-left:1.5rem;padding-right:1.5rem">
-  <div class="stepper" role="list" aria-label="Booking steps">
-    <div class="step active" id="s1" role="listitem"><div class="step-num">1</div><div class="step-label">What</div></div>
-    <div class="step" id="s2" role="listitem"><div class="step-num">2</div><div class="step-label">Where &amp; When</div></div>
-    <div class="step" id="s3" role="listitem"><div class="step-num">3</div><div class="step-label">Who &amp; Send</div></div>
+<!-- ── HERO ── -->
+<section class="del-hero" aria-label="Deliveries hero">
+  <div class="del-hero-inner sw">
+    <div class="del-hero-text">
+      <div class="del-eyebrow">📦 Uganda Package Delivery</div>
+      <h1>We deliver<br>across <span>Uganda</span></h1>
+      <p>Same-day, next-day and intercity package delivery — documents, parcels, luggage and more. Our drivers are already on the road. Get a quote in minutes via WhatsApp.</p>
+      <div class="del-trust-row">
+        <div class="del-trust-item"><span class="del-trust-dot"></span>Same-day delivery available</div>
+        <div class="del-trust-item"><span class="del-trust-dot"></span>Kampala → Entebbe → Jinja → Mbarara</div>
+        <div class="del-trust-item"><span class="del-trust-dot"></span>24/7 WhatsApp updates</div>
+      </div>
+    </div>
+    <div class="del-form-card">
+      <h2>Get a delivery quote</h2>
+      <p class="sub">Free, no-obligation quote via WhatsApp — usually within 15 minutes.</p>
+      <form onsubmit="sendDeliveryForm(event)">
+        <div class="del-row">
+          <div class="del-fg">
+            <label for="d-from">📍 Pickup location</label>
+            <input class="del-inp" id="d-from" type="text" placeholder="Street, area or landmark" required autocomplete="off">
+          </div>
+          <div class="del-fg">
+            <label for="d-to">🏁 Deliver to</label>
+            <input class="del-inp" id="d-to" type="text" placeholder="Recipient address or area" required autocomplete="off">
+          </div>
+        </div>
+        <div class="del-fg">
+          <label for="d-desc">📦 What's being sent?</label>
+          <input class="del-inp" id="d-desc" type="text" placeholder="e.g. Legal documents, laptop, clothes, groceries…" autocomplete="off">
+        </div>
+        <div class="del-row">
+          <div class="del-fg">
+            <label for="d-size">📏 Package size</label>
+            <select class="del-sel" id="d-size" required>
+              <option value="">Select…</option>
+              <option value="envelope">Envelope / documents</option>
+              <option value="small">Small — fits in a bag</option>
+              <option value="medium">Medium — box / suitcase</option>
+              <option value="large">Large — furniture / bulk load</option>
+            </select>
+          </div>
+          <div class="del-fg">
+            <label for="d-date">📅 Collection date</label>
+            <input class="del-inp" id="d-date" type="date" style="color-scheme:dark">
+          </div>
+        </div>
+        <div class="del-fg">
+          <label for="d-contact">📱 Recipient name &amp; phone</label>
+          <input class="del-inp" id="d-contact" type="text" placeholder="Name, +256 …" autocomplete="off">
+        </div>
+        <div class="del-fg">
+          <label for="d-notes">💬 Anything else? (optional)</label>
+          <textarea class="del-txta" id="d-notes" placeholder="Fragile, urgent, needs refrigeration…"></textarea>
+        </div>
+        <button class="del-btn" type="submit">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+          Send via WhatsApp — Get Quote
+        </button>
+        <p class="del-note">Opens WhatsApp with your details pre-filled &bull; No payment needed upfront &bull; 15-min response</p>
+      </form>
+    </div>
   </div>
 </section>
 
-<div class="bk-wrap">
-  <div class="bk-card">
-
-    <!-- ══ STEP 1: WHAT TYPE + JOURNEY ══ -->
-    <div class="bk-card-head" id="h1"><div class="step-badge">1</div><h2>What type of trip?</h2></div>
-    <div class="bk-body" id="b1">
-      <div class="bk-panel active" id="p1">
-        <div class="trip-types" role="radiogroup" aria-label="Trip type">
-          <div class="tt-card selected" onclick="selectTrip(this,'Airport Transfer')" tabindex="0" role="radio" aria-checked="true"><div class="tt-icon">&#9992;&#65039;</div><div class="tt-label">Airport Transfer</div></div>
-          <div class="tt-card" onclick="selectTrip(this,'Car Hire')" tabindex="0" role="radio" aria-checked="false"><div class="tt-icon">&#128663;</div><div class="tt-label">Car Hire</div></div>
-          <div class="tt-card" onclick="selectTrip(this,'Safari Tour')" tabindex="0" role="radio" aria-checked="false"><div class="tt-icon">&#128024;</div><div class="tt-label">Safari Tour</div></div>
-          <div class="tt-card" onclick="selectTrip(this,'City Tour')" tabindex="0" role="radio" aria-checked="false"><div class="tt-icon">&#127970;</div><div class="tt-label">City Tour</div></div>
-          <div class="tt-card" onclick="selectTrip(this,'Corporate')" tabindex="0" role="radio" aria-checked="false"><div class="tt-icon">&#128188;</div><div class="tt-label">Corporate</div></div>
-          <div class="tt-card" onclick="selectTrip(this,'Other')" tabindex="0" role="radio" aria-checked="false"><div class="tt-icon">&#128205;</div><div class="tt-label">Other</div></div>
-        </div>
-
-        <div class="fg" style="margin-bottom:0">
-          <label>Journey Type <span class="req">*</span></label>
-          <div class="journey-type-row" role="radiogroup" aria-label="Journey type">
-            <button type="button" class="jt-btn active" id="jt-single" onclick="setJourneyType('single')" aria-checked="true">
-              <span class="jt-icon">&#10132;</span>
-              <span class="jt-label">Single Journey</span>
-              <span class="jt-sub">One way</span>
-            </button>
-            <button type="button" class="jt-btn" id="jt-return" onclick="setJourneyType('return')" aria-checked="false">
-              <span class="jt-icon">&#8644;</span>
-              <span class="jt-label">Return Journey</span>
-              <span class="jt-sub">There &amp; back</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="bk-nav"><span></span><button class="btn btn-o" onclick="goStep(2)">Next: Where &amp; When &#8594;</button></div>
+<!-- ── HOW IT WORKS ── -->
+<section class="section" aria-label="How delivery works">
+  <div class="sw">
+    <p class="sh">Simple process</p>
+    <h2 class="st">How it works</h2>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-num">1</div>
+        <h3>Fill the form</h3>
+        <p>Tell us pickup, drop-off, package size and when you need it. Takes 30 seconds.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">2</div>
+        <h3>Get your quote</h3>
+        <p>We reply on WhatsApp within 15 minutes with a fixed price — no hidden fees, ever.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">3</div>
+        <h3>We collect it</h3>
+        <p>A Mugabo driver picks up from your location. You get a confirmation message when they're on the way.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">4</div>
+        <h3>Delivered &amp; confirmed</h3>
+        <p>You receive a WhatsApp photo confirmation once the package is in the recipient's hands.</p>
       </div>
     </div>
-
-    <!-- ══ STEP 2: WHERE & WHEN ══ -->
-    <div class="bk-card-head" style="display:none" id="h2"><div class="step-badge">2</div><h2>Where &amp; when?</h2></div>
-    <div class="bk-body" id="b2" style="display:none">
-      <div class="bk-panel active" id="p2">
-        <div class="fg">
-          <label for="bk-pickup">Pick-up Location <span class="req">*</span></label>
-          <input id="bk-pickup" type="text" class="inp" placeholder="e.g. Entebbe Airport, Kampala CBD..." required aria-required="true" autocomplete="off">
-          <span class="field-error">Please enter a pick-up location.</span>
-          <button type="button" class="geo-btn" id="geoBtn" onclick="getLocation()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
-            Use my current location (GPS)
-          </button>
-          <div class="geo-status" id="geoStatus" aria-live="polite"></div>
-        </div>
-        <div class="fg">
-          <label for="bk-dest">Destination <span class="req">*</span></label>
-          <input id="bk-dest" type="text" class="inp" placeholder="e.g. Bwindi NP, Murchison Falls, Kampala hotel..." required aria-required="true" autocomplete="off">
-          <span class="field-error">Please enter a destination.</span>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
-          <div class="fg">
-            <label for="bk-date">Outbound Date <span class="req">*</span></label>
-            <input id="bk-date" type="date" class="inp" required aria-required="true">
-            <span class="field-error">Please choose a date.</span>
-          </div>
-          <div class="fg">
-            <label for="bk-time">Pick-up Time <span class="req">*</span></label>
-            <input id="bk-time" type="time" class="inp" value="08:00" required>
-          </div>
-        </div>
-        <div class="fg" id="ret-date-group" style="display:none">
-          <label for="bk-ret">Return Date <span class="req">*</span></label>
-          <input id="bk-ret" type="date" class="inp">
-          <span class="field-error" id="ret-error">Return date must be after the outbound date.</span>
-        </div>
-        <div class="bk-nav">
-          <button class="btn btn-out" onclick="goStep(1)">&#8592; Back</button>
-          <button class="btn btn-o" onclick="validateStep2()">Next: Who &amp; Send &#8594;</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- ══ STEP 3: WHO + VEHICLE + SEND ══ -->
-    <div class="bk-card-head" style="display:none" id="h3"><div class="step-badge">3</div><h2>Your details &amp; vehicle</h2></div>
-    <div class="bk-body" id="b3" style="display:none">
-      <div class="bk-panel active" id="p3">
-
-        <!-- Passenger count first — drives vehicle suggestion -->
-        <div class="pax-row">
-          <div class="fg" style="margin-bottom:0">
-            <label for="bk-pax">Passengers <span class="req">*</span></label>
-            <select id="bk-pax" class="sel" required onchange="suggestVehicle(this.value)">
-              <option value="">How many?</option>
-              <option>1</option><option>2</option><option>3</option><option>4</option>
-              <option>5</option><option>6</option><option>7</option><option>8+</option>
-            </select>
-            <span class="field-error">Please select passenger count.</span>
-          </div>
-          <div class="fg" style="margin-bottom:0">
-            <label for="bk-fname">Your Name <span class="req">*</span></label>
-            <input id="bk-fname" type="text" class="inp" placeholder="Full name" required autocomplete="name">
-            <span class="field-error">Please enter your name.</span>
-          </div>
-        </div>
-
-        <div class="fg">
-          <label for="bk-phone">WhatsApp / Phone <span class="req">*</span></label>
-          <input id="bk-phone" type="tel" class="inp" placeholder="e.g. 0706 689 064" required autocomplete="tel">
-          <span class="field-error">Please enter a valid phone number.</span>
-        </div>
-
-        <!-- Vehicle — auto-suggested based on pax, still swappable -->
-        <div class="fg">
-          <label>Vehicle <span class="req">*</span> <span id="veh-suggest-note" style="font-size:.72rem;font-weight:400;color:var(--gray-lt)">— select passengers to get a suggestion</span></label>
-          <div class="veh-grid" role="radiogroup" aria-label="Vehicle" style="margin-bottom:0">
-            <div class="veh-card selected" id="vc-noah" onclick="selectVeh(this,'Toyota Noah','Up to 8 passengers')" tabindex="0">
-              <div class="veh-icon">&#128656;</div>
-              <div class="veh-name">Toyota Noah <span class="veh-suggested-badge">Suggested</span></div>
-              <div class="veh-cap">Up to 8 passengers</div>
-            </div>
-            <div class="veh-card" id="vc-cruiser" onclick="selectVeh(this,'Safari Land Cruiser','Best for rough terrain')" tabindex="0">
-              <div class="veh-icon">&#128667;</div>
-              <div class="veh-name">Land Cruiser <span class="veh-suggested-badge">Suggested</span></div>
-              <div class="veh-cap">Best for rough terrain</div>
-            </div>
-            <div class="veh-card" id="vc-sedan" onclick="selectVeh(this,'Executive Sedan','Up to 4 passengers')" tabindex="0">
-              <div class="veh-icon">&#128663;</div>
-              <div class="veh-name">Executive Sedan <span class="veh-suggested-badge">Suggested</span></div>
-              <div class="veh-cap">Up to 4 passengers</div>
-            </div>
-            <div class="veh-card" id="vc-van" onclick="selectVeh(this,'Group Van','Up to 14 passengers')" tabindex="0">
-              <div class="veh-icon">&#128652;</div>
-              <div class="veh-name">Group Van <span class="veh-suggested-badge">Suggested</span></div>
-              <div class="veh-cap">Up to 14 passengers</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Optional fields -->
-        <div class="fg budget-field">
-          <label for="bk-budget">Your Budget <span class="budget-opt">(optional)</span></label>
-          <div class="budget-input-wrap">
-            <span class="budget-currency">UGX</span>
-            <input id="bk-budget" type="text" class="inp budget-inp" placeholder="e.g. 150,000 — 250,000" inputmode="numeric">
-          </div>
-          <p class="budget-hint">&#128161; Share your rough budget and Reggane will confirm a fair price. No obligation.</p>
-        </div>
-        <div class="fg">
-          <label for="bk-notes">Special Requirements <span class="budget-opt">(optional)</span></label>
-          <textarea id="bk-notes" class="txta" rows="2" placeholder="Luggage, child seat, disability needs, route preferences..."></textarea>
-        </div>
-
-        <!-- Mini summary before send -->
-        <div class="step3-send-wrap">
-          <div class="mini-summary" id="mini-sum">
-            <h5>&#128203; Your Booking at a Glance</h5>
-            <div class="mini-sum-grid">
-              <div class="ms-row"><span class="ms-key">Trip</span><span class="ms-val" id="ms-trip">&mdash;</span></div>
-              <div class="ms-row"><span class="ms-key">Journey</span><span class="ms-val" id="ms-journey">&mdash;</span></div>
-              <div class="ms-row"><span class="ms-key">Pick-up</span><span class="ms-val" id="ms-pickup">&mdash;</span></div>
-              <div class="ms-row"><span class="ms-key">Destination</span><span class="ms-val" id="ms-dest">&mdash;</span></div>
-              <div class="ms-row"><span class="ms-key">Date &amp; Time</span><span class="ms-val" id="ms-dt">&mdash;</span></div>
-              <div class="ms-row" id="ms-ret-row" style="display:none"><span class="ms-key">Return Date</span><span class="ms-val" id="ms-ret">&mdash;</span></div>
-            </div>
-          </div>
-
-          <div class="wa-note" style="margin-bottom:1.25rem">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            <div><strong>Confirmation via WhatsApp.</strong> We reply within 1 hour with your reference, driver and price. No payment now.</div>
-          </div>
-
-          <!-- SUCCESS STATE -->
-          <div class="form-success" id="bkSuccess">
-            <h3>&#128172; Booking Sent!</h3>
-            <p>Your booking has been sent via WhatsApp. We&rsquo;ll confirm within 1 hour with your reference number, driver details and pricing.<br><strong>Check your WhatsApp now.</strong></p>
-          </div>
-
-          <button class="wa-confirm-btn" id="confirmBtn" onclick="validateAndSend()">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Send Booking via WhatsApp
-          </button>
-          <div style="text-align:center;margin-top:1rem">
-            <button class="btn btn-out btn-sm" onclick="goStep(2)">&#8592; Back: Change Details</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
   </div>
+</section>
 
-  <div class="bk-note" style="margin-top:1.25rem">
-    <strong>&#128222; Prefer to call?</strong>
-    <a href="tel:+256706689064" style="color:var(--orange)">0706 689 064</a> &nbsp;|&nbsp;
-    <a href="tel:+256774333771" style="color:var(--orange)">0774 333 771</a><br>
-    Available 24/7 in Kampala, Uganda.
+<!-- ── WHAT WE DELIVER ── -->
+<section class="section alt" aria-label="What we deliver">
+  <div class="sw">
+    <p class="sh">What we carry</p>
+    <h2 class="st">We handle all kinds of packages</h2>
+    <p class="sd">If it fits in a vehicle, we can deliver it. We're trusted by businesses and individuals across Uganda.</p>
+    <div class="what-grid">
+      <div class="what-item">
+        <span class="what-icon">📄</span>
+        <h4>Documents</h4>
+        <p>Legal papers, contracts, passports, ID cards</p>
+      </div>
+      <div class="what-item">
+        <span class="what-icon">💻</span>
+        <h4>Electronics</h4>
+        <p>Phones, laptops, tablets — handled with care</p>
+      </div>
+      <div class="what-item">
+        <span class="what-icon">🛍️</span>
+        <h4>Shopping</h4>
+        <p>Market goods, online orders, groceries</p>
+      </div>
+      <div class="what-item">
+        <span class="what-icon">🧳</span>
+        <h4>Luggage</h4>
+        <p>Airport luggage sent ahead or collected</p>
+      </div>
+      <div class="what-item">
+        <span class="what-icon">🎁</span>
+        <h4>Gifts</h4>
+        <p>Surprises, hampers, occasion gifts</p>
+      </div>
+      <div class="what-item">
+        <span class="what-icon">💊</span>
+        <h4>Medication</h4>
+        <p>Pharmacy runs, hospital supplies</p>
+      </div>
+      <div class="what-item">
+        <span class="what-icon">🏠</span>
+        <h4>Home goods</h4>
+        <p>Furniture, appliances, bulky items (large)</p>
+      </div>
+      <div class="what-item">
+        <span class="what-icon">🏢</span>
+        <h4>Business</h4>
+        <p>B2B intercity freight, trade goods</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRICING ── -->
+<section class="section" aria-label="Delivery pricing">
+  <div class="sw">
+    <p class="sh">Fair, transparent pricing</p>
+    <h2 class="st">Starting prices — <span style="color:var(--ug-green,#1a472a)">always quoted upfront</span></h2>
+    <p class="sd">All prices are confirmed before pickup. Final price depends on distance, size and any special handling. No surprises.</p>
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>Within Kampala</h3>
+        <p class="price-note">City &amp; suburbs — same day</p>
+        <p class="price-tag" style="margin-bottom:.75rem">From UGX 15,000</p>
+        <ul>
+          <li>Envelopes &amp; documents</li>
+          <li>Any area within Kampala city</li>
+          <li>2–4 hour window</li>
+          <li>WhatsApp confirmation</li>
+        </ul>
+        <button class="btn-quote" onclick="quickQuote('within Kampala')">Get quote</button>
+      </div>
+      <div class="price-card featured">
+        <h3>Kampala ↔ Entebbe</h3>
+        <p class="price-note">Airport corridor — express</p>
+        <p class="price-tag" style="margin-bottom:.75rem">From UGX 30,000</p>
+        <ul>
+          <li>Documents, parcels, luggage</li>
+          <li>Airport collections &amp; drop-offs</li>
+          <li>1–2 hour express option</li>
+          <li>Photo delivery confirmation</li>
+        </ul>
+        <button class="btn-quote" onclick="quickQuote('Kampala to Entebbe')">Get quote</button>
+      </div>
+      <div class="price-card">
+        <h3>Intercity Uganda</h3>
+        <p class="price-note">Jinja, Mbarara, Gulu &amp; more</p>
+        <p class="price-tag" style="margin-bottom:.75rem">From UGX 60,000</p>
+        <ul>
+          <li>All package sizes</li>
+          <li>Next-day or scheduled</li>
+          <li>Fragile item handling</li>
+          <li>Real-time WhatsApp updates</li>
+        </ul>
+        <button class="btn-quote" onclick="quickQuote('intercity Uganda')">Get quote</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COVERAGE ── -->
+<div class="coverage-strip">
+  <div class="sw">
+    <p style="font-size:.7rem;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem">📍 We cover</p>
+    <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:1.75rem;font-weight:900;color:#fff;margin-bottom:.5rem">Delivering across Uganda</h2>
+    <p style="color:rgba(255,255,255,.65);font-size:.9rem;margin-bottom:0">Our driver network covers the whole country. If you're unsure whether we reach your area, just ask.</p>
+    <div class="coverage-cities">
+      <span class="city-pill">📍 Kampala</span>
+      <span class="city-pill">✈️ Entebbe</span>
+      <span class="city-pill">🌊 Jinja</span>
+      <span class="city-pill">🦍 Fort Portal</span>
+      <span class="city-pill">🏔 Mbarara</span>
+      <span class="city-pill">🦁 Kasese</span>
+      <span class="city-pill">🌿 Gulu</span>
+      <span class="city-pill">⛪ Masaka</span>
+      <span class="city-pill">🚤 Kisumu area</span>
+      <span class="city-pill">+ anywhere else, just ask</span>
+    </div>
   </div>
 </div>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="section alt" aria-label="Delivery reviews">
+  <div class="sw">
+    <p class="sh">What people say</p>
+    <h2 class="st">Trusted by businesses &amp; individuals</h2>
+    <div class="del-t-grid">
+      <div class="del-t-card">
+        <div class="del-t-stars">★★★★★</div>
+        <p class="del-t-text">"Sent contracts from Kampala to Jinja — collected at 9am, delivered by 1pm. The WhatsApp photo confirmation was a great touch. Will use again."</p>
+        <span class="del-t-auth">Sarah K. — Kampala law firm</span>
+      </div>
+      <div class="del-t-card">
+        <div class="del-t-stars">★★★★★</div>
+        <p class="del-t-text">"I was travelling and needed my laptop sent to my hotel in Entebbe. Mugabo sorted it in under two hours. Brilliant service."</p>
+        <span class="del-t-auth">James O. — Business traveller</span>
+      </div>
+      <div class="del-t-card">
+        <div class="del-t-stars">★★★★★</div>
+        <p class="del-t-text">"We use Mugabo for all our intercity deliveries now. Reliable, priced fairly, and the driver always calls the recipient before arriving."</p>
+        <span class="del-t-auth">Patricia M. — Kampala retailer</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BAND ── -->
+<div class="cta-band">
+  <div class="sw" style="text-align:center">
+    <h2>Need something delivered today?</h2>
+    <p>Don't wait — WhatsApp us now and we'll have a driver on the way. Available 24/7.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/256706689064?text=Hello%20Mugabo%20Travels!%20I%20need%20a%20package%20delivery%20quote%20please." class="btn btn-dark btn-lg">&#128172; WhatsApp for a Quote</a>
+      <a href="tel:+256706689064" class="btn btn-out btn-lg">&#128222; Call Us Now</a>
+    </div>
+  </div>
+</div>
+
 </main>
-
-<script>
-var bk={trip:'Airport Transfer',vehicle:'Toyota Noah',vehicleCap:'Up to 8 passengers',journey:'single'};
-
-// Pre-fill from URL params (homepage widget deep-links)
-(function(){
-  var p=new URLSearchParams(location.search);
-  if(p.get('dest'))document.getElementById('bk-dest').value=p.get('dest');
-  if(p.get('from'))document.getElementById('bk-pickup').value=p.get('from');
-  if(p.get('date'))document.getElementById('bk-date').value=p.get('date');
-  if(p.get('time'))document.getElementById('bk-time').value=p.get('time');
-  if(p.get('type')){
-    var map={'transfer':'Airport Transfer','safari':'Safari Tour','hourly':'Car Hire'};
-    var t=map[p.get('type')];
-    if(t){
-      document.querySelectorAll('.tt-card').forEach(function(c){
-        var lbl=c.querySelector('.tt-label');
-        if(lbl&&lbl.textContent===t){
-          document.querySelectorAll('.tt-card').forEach(function(x){x.classList.remove('selected');x.setAttribute('aria-checked','false');});
-          c.classList.add('selected');c.setAttribute('aria-checked','true');bk.trip=t;
-        }
-      });
-    }
-  }
-})();
-
-document.getElementById('bk-date').min=new Date().toISOString().split('T')[0];
-
-// ── STEP 1 ──
-function selectTrip(el,type){
-  document.querySelectorAll('.tt-card').forEach(function(c){c.classList.remove('selected');c.setAttribute('aria-checked','false');});
-  el.classList.add('selected');el.setAttribute('aria-checked','true');
-  bk.trip=type;
-}
-
-function setJourneyType(type){
-  bk.journey=type;
-  var isSingle=(type==='single');
-  document.getElementById('jt-single').classList.toggle('active',isSingle);
-  document.getElementById('jt-return').classList.toggle('active',!isSingle);
-  document.getElementById('jt-single').setAttribute('aria-checked',isSingle?'true':'false');
-  document.getElementById('jt-return').setAttribute('aria-checked',isSingle?'false':'true');
-  var retGroup=document.getElementById('ret-date-group');
-  if(retGroup){
-    retGroup.style.display=isSingle?'none':'';
-    document.getElementById('bk-ret').required=!isSingle;
-    if(isSingle){document.getElementById('bk-ret').value='';retGroup.classList.remove('has-error');}
-  }
-}
-
-// ── STEP 2 ──
-function getLocation(){
-  var btn=document.getElementById('geoBtn'),st=document.getElementById('geoStatus');
-  if(!navigator.geolocation){st.textContent='Geolocation not supported.';st.style.display='block';return;}
-  btn.disabled=true;btn.textContent='Getting location...';
-  navigator.geolocation.getCurrentPosition(
-    function(pos){
-      var lat=pos.coords.latitude.toFixed(5),lng=pos.coords.longitude.toFixed(5);
-      document.getElementById('bk-pickup').value='My Location: '+lat+', '+lng;
-      btn.textContent='Use my current location (GPS)';btn.disabled=false;
-      st.textContent='Coordinates captured — we will find you precisely.';st.style.display='block';
-      fetch('https://nominatim.openstreetmap.org/reverse?format=json&lat='+lat+'&lon='+lng)
-        .then(function(r){return r.json();})
-        .then(function(d){if(d.display_name)document.getElementById('bk-pickup').value=d.display_name.split(',').slice(0,4).join(', ');})
-        .catch(function(){});
-    },
-    function(err){
-      var msgs=['','Location permission denied. Please type your address.','Location unavailable.','Request timed out.'];
-      btn.textContent='Use my current location (GPS)';btn.disabled=false;
-      st.textContent=msgs[err.code]||'Could not get location.';st.style.display='block';
-    },
-    {enableHighAccuracy:true,timeout:12000,maximumAge:0}
-  );
-}
-
-function validateStep2(){
-  var p=document.getElementById('bk-pickup').value.trim(),
-      d=document.getElementById('bk-dest').value.trim(),
-      dt=document.getElementById('bk-date').value,
-      rt=document.getElementById('bk-ret').value;
-  var ok=true;
-  if(!p){document.getElementById('bk-pickup').closest('.fg').classList.add('has-error');ok=false;}
-  if(!d){document.getElementById('bk-dest').closest('.fg').classList.add('has-error');ok=false;}
-  if(!dt){document.getElementById('bk-date').closest('.fg').classList.add('has-error');ok=false;}
-  if(bk.journey==='return'){
-    var retGroup=document.getElementById('ret-date-group');
-    var retErr=document.getElementById('ret-error');
-    if(!rt){retGroup.classList.add('has-error');retErr.textContent='Please choose a return date.';ok=false;}
-    else if(dt&&rt<=dt){retGroup.classList.add('has-error');retErr.textContent='Return date must be after the outbound date.';ok=false;}
-    else{retGroup.classList.remove('has-error');}
-  }
-  if(ok){goStep(3);updateMiniSummary();}
-}
-
-// ── STEP 3 ──
-// Suggest vehicle based on passenger count
-function suggestVehicle(pax){
-  var n=parseInt(pax)||0;
-  var ids=['vc-sedan','vc-noah','vc-cruiser','vc-van'];
-  // Clear all suggested badges
-  ids.forEach(function(id){
-    var c=document.getElementById(id);
-    if(c){c.classList.remove('suggested');c.classList.remove('selected');}
-  });
-  var suggested='vc-noah'; // default
-  if(n<=4) suggested='vc-sedan';
-  else if(n<=8) suggested='vc-noah';
-  else suggested='vc-van';
-  // If safari trip, prefer Land Cruiser for 1-8
-  if(bk.trip==='Safari Tour'&&n<=8) suggested='vc-cruiser';
-
-  var card=document.getElementById(suggested);
-  if(card){
-    card.classList.add('suggested','selected');
-    var vn=card.querySelector('.veh-name').firstChild.textContent.trim();
-    var vc=card.querySelector('.veh-cap').textContent.trim();
-    bk.vehicle=vn;bk.vehicleCap=vc;
-    document.getElementById('veh-suggest-note').textContent='&#10003; Suggested for '+pax+(pax==='8+'?' or more':'')+' passengers — swap below if needed';
-  }
-}
-
-function selectVeh(el,name,cap){
-  document.querySelectorAll('.veh-card').forEach(function(c){c.classList.remove('selected');});
-  el.classList.add('selected');
-  bk.vehicle=name;bk.vehicleCap=cap;
-}
-
-function updateMiniSummary(){
-  var isReturn=(bk.journey==='return');
-  var el=function(id){return document.getElementById(id);};
-  el('ms-trip').textContent=bk.trip;
-  el('ms-journey').textContent=isReturn?'Return (there & back)':'Single (one way)';
-  el('ms-pickup').textContent=el('bk-pickup').value||'—';
-  el('ms-dest').textContent=el('bk-dest').value||'—';
-  el('ms-dt').textContent=(el('bk-date').value||'—')+' at '+(el('bk-time').value||'—');
-  var retRow=el('ms-ret-row');
-  if(isReturn&&el('bk-ret').value){
-    retRow.style.display='';el('ms-ret').textContent=el('bk-ret').value;
-  } else {
-    retRow.style.display='none';
-  }
-}
-
-function validateAndSend(){
-  var n=document.getElementById('bk-fname').value.trim(),
-      ph=document.getElementById('bk-phone').value.trim(),
-      px=document.getElementById('bk-pax').value;
-  var ok=true;
-  if(!n){document.getElementById('bk-fname').closest('.fg').classList.add('has-error');ok=false;}
-  if(!ph){document.getElementById('bk-phone').closest('.fg').classList.add('has-error');ok=false;}
-  if(!px){document.getElementById('bk-pax').closest('.fg').classList.add('has-error');ok=false;}
-  if(!ok){window.scrollTo({top:document.getElementById('b3').offsetTop-80,behavior:'smooth'});return;}
-  sendWhatsApp();
-}
-
-function sendWhatsApp(){
-  var isReturn=(bk.journey==='return'),
-      retDate=document.getElementById('bk-ret').value,
-      budget=document.getElementById('bk-budget').value.trim();
-  var lines=[
-    '*NEW BOOKING — Mugabo Travels*','',
-    '📋 *Trip Type:* '+bk.trip,
-    '⇄ *Journey:* '+(isReturn?'RETURN (there & back)':'SINGLE (one way)'),
-    '',
-    '📍 *Pick-up:* '+(document.getElementById('bk-pickup').value||'—'),
-    '🏁 *Destination:* '+(document.getElementById('bk-dest').value||'—'),
-    '📅 *Outbound Date:* '+(document.getElementById('bk-date').value||'—'),
-    '⏰ *Pick-up Time:* '+(document.getElementById('bk-time').value||'—'),
-  ];
-  if(isReturn&&retDate){lines.push('📅 *Return Date:* '+retDate);}
-  lines.push('',
-    '🚗 *Vehicle:* '+bk.vehicle,
-    '👥 *Passengers:* '+(document.getElementById('bk-pax').value||'—'),
-    '',
-    '👤 *Name:* '+(document.getElementById('bk-fname').value||'—'),
-    '📱 *Phone:* '+(document.getElementById('bk-phone').value||'—'),
-    '📝 *Notes:* '+(document.getElementById('bk-notes').value||'None')
-  );
-  if(budget){lines.push('','💰 *Customer Budget:* UGX '+budget+' (customer named this — please confirm your fair price)');}
-  var msg=lines.join('\n');
-  window.open('https://wa.me/256706689064?text='+encodeURIComponent(msg),'_blank');
-  document.getElementById('confirmBtn').style.display='none';
-  document.getElementById('bkSuccess').classList.add('visible');
-}
-
-// ── NAVIGATION ──
-function goStep(n){
-  for(var i=1;i<=3;i++){
-    var sEl=document.getElementById('s'+i);
-    var hEl=document.getElementById('h'+i);
-    var bEl=document.getElementById('b'+i);
-    sEl.classList.remove('active','done');
-    if(i>1&&hEl){hEl.style.display='none';bEl.style.display='none';}
-  }
-  for(var j=1;j<n;j++){document.getElementById('s'+j).classList.add('done');}
-  document.getElementById('s'+n).classList.add('active');
-  if(n>=2){document.getElementById('h2').style.display='';document.getElementById('b2').style.display='';}
-  if(n>=3){document.getElementById('h3').style.display='';document.getElementById('b3').style.display='';updateMiniSummary();}
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
-// Live validation clear-on-fix
-document.querySelectorAll('.inp,.sel').forEach(function(inp){
-  inp.addEventListener('blur',function(){
-    var fg=this.closest('.fg');if(!fg)return;
-    if(this.required&&!this.value.trim()){fg.classList.add('has-error');this.classList.add('invalid');}
-    else{fg.classList.remove('has-error');this.classList.remove('invalid');if(this.value.trim())this.classList.add('valid');}
-  });
-  inp.addEventListener('input',function(){
-    if(this.classList.contains('invalid')&&this.value.trim()){
-      var fg=this.closest('.fg');if(fg)fg.classList.remove('has-error');
-      this.classList.remove('invalid');this.classList.add('valid');
-    }
-  });
-});
-
-// Return date cross-validation
-document.addEventListener('DOMContentLoaded',function(){
-  var retInp=document.getElementById('bk-ret');
-  var dateInp=document.getElementById('bk-date');
-  if(retInp){
-    retInp.addEventListener('change',function(){
-      var dt=dateInp.value;
-      if(this.value&&(!dt||this.value>dt))document.getElementById('ret-date-group').classList.remove('has-error');
-    });
-  }
-  if(dateInp){
-    dateInp.addEventListener('change',function(){
-      var rt=retInp?retInp.value:'';
-      if(rt&&rt<=this.value){
-        document.getElementById('ret-date-group').classList.add('has-error');
-        document.getElementById('ret-error').textContent='Return date must be after the outbound date.';
-      }
-    });
-  }
-});
-</script>
-
 
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
@@ -1246,8 +1013,43 @@ document.addEventListener('DOMContentLoaded',function(){
   </div>
   <div class="f-bottom"><p>&copy; 2026 <strong>Mugabo Travels &amp; Car Hire</strong> &mdash; Kampala, Uganda</p></div>
 </footer>
-<a href="https://wa.me/256706689064?text=Hello%20Mugabo%20Travels!" class="wa-fab" aria-label="Chat on WhatsApp">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
+
+
+
+<script>
+document.getElementById('d-date').min = new Date().toISOString().split('T')[0];
+
+function sendDeliveryForm(e) {
+  e.preventDefault();
+  var from = document.getElementById('d-from').value || '';
+  var to   = document.getElementById('d-to').value || '';
+  var desc = document.getElementById('d-desc').value || '';
+  var size = document.getElementById('d-size').value || '';
+  var date = document.getElementById('d-date').value || '';
+  var cont = document.getElementById('d-contact').value || '';
+  var notes= document.getElementById('d-notes').value || '';
+  var sizeMap = {
+    'envelope':'Envelope / documents',
+    'small':'Small (fits in a bag)',
+    'medium':'Medium (box / suitcase)',
+    'large':'Large (furniture / bulk)'
+  };
+  var msg = 'Hello Mugabo Travels! I need a *package delivery*:%0A'
+    + '%F0%9F%93%A6 Package: ' + encodeURIComponent(desc||'Not specified') + '%0A'
+    + '%F0%9F%93%8D Pickup: '  + encodeURIComponent(from) + '%0A'
+    + '%F0%9F%8F%81 Deliver to: ' + encodeURIComponent(to) + '%0A'
+    + '%F0%9F%93%8F Size: '    + encodeURIComponent(sizeMap[size]||size||'Not specified') + '%0A'
+    + '%F0%9F%93%85 Date: '    + encodeURIComponent(date||'Flexible') + '%0A'
+    + '%F0%9F%93%B1 Recipient: '+ encodeURIComponent(cont||'Not specified') + '%0A'
+    + (notes ? ('%F0%9F%92%AC Notes: ' + encodeURIComponent(notes) + '%0A') : '')
+    + 'Please send me a quote. Thank you!';
+  window.open('https://wa.me/256706689064?text=' + msg, '_blank');
+}
+
+function quickQuote(route) {
+  var msg = 'Hello Mugabo Travels! I need a delivery quote for *' + encodeURIComponent(route) + '*. Can you help?';
+  window.open('https://wa.me/256706689064?text=' + msg, '_blank');
+}
+</script>
 </body>
 </html>
