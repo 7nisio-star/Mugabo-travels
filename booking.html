@@ -630,6 +630,28 @@ button,input,select,textarea{font-family:var(--f)}
   .section.sm{padding:2rem 1rem}
   .footer-inner{grid-template-columns:1fr}
 }
+
+/* ── JOURNEY TYPE SELECTOR ── */
+.journey-type-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:.2rem}
+.jt-btn{display:flex;flex-direction:column;align-items:center;gap:.25rem;padding:1rem .75rem;border:2px solid var(--bdr);border-radius:10px;background:#fff;cursor:pointer;transition:all .22s;font-family:var(--f);text-align:center}
+.jt-btn:hover{border-color:var(--ug-red);background:rgba(217,0,0,.03)}
+.jt-btn.active{border-color:var(--ug-red)!important;background:rgba(217,0,0,.06)!important;box-shadow:0 0 0 3px rgba(217,0,0,.12)}
+.jt-icon{font-size:1.4rem;line-height:1}
+.jt-label{font-size:.88rem;font-weight:700;color:var(--black)}
+.jt-btn.active .jt-label{color:var(--ug-red)}
+.jt-sub{font-size:.71rem;color:var(--gray-lt);font-weight:400}
+
+/* ── BUDGET FIELD ── */
+.budget-field{margin-top:.5rem}
+.budget-opt{font-weight:400;color:var(--gray-lt);font-size:.72rem;margin-left:.3rem}
+.budget-input-wrap{display:flex;align-items:center;border:1.5px solid var(--bdr);border-radius:8px;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+.budget-input-wrap:focus-within{border-color:var(--ug-red);box-shadow:0 0 0 3px rgba(217,0,0,.1)}
+.budget-currency{padding:0 .85rem;font-size:.8rem;font-weight:700;color:var(--gray);background:var(--off-white);border-right:1.5px solid var(--bdr);min-height:48px;display:flex;align-items:center;flex-shrink:0;letter-spacing:.03em}
+.budget-inp{border:none!important;box-shadow:none!important;border-radius:0!important;flex:1;min-height:48px}
+.budget-inp:focus{box-shadow:none!important}
+.budget-hint{margin-top:.55rem;font-size:.76rem;color:var(--gray);line-height:1.55;background:rgba(252,220,4,.1);border:1px solid rgba(252,220,4,.3);border-radius:7px;padding:.6rem .85rem}
+#ret-date-group.has-error .inp{border-color:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.1)}
+#ret-date-group.has-error .field-error{display:block}
 </style>
 <style>
 .bk-hero{background:var(--navy-d);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden}
@@ -785,9 +807,25 @@ document.addEventListener('click',function(e){if(!e.target.closest('.navbar')){u
           <input id="bk-dest" type="text" class="inp" placeholder="e.g. Bwindi NP, Murchison Falls, Kampala hotel..." required aria-required="true">
           <span class="field-error">Please enter a destination.</span>
         </div>
+        <!-- Journey Type -->
+        <div class="fg">
+          <label>Journey Type <span class="req">*</span></label>
+          <div class="journey-type-row" role="radiogroup" aria-label="Journey type">
+            <button type="button" class="jt-btn active" id="jt-single" onclick="setJourneyType('single')" aria-checked="true">
+              <span class="jt-icon">&#10132;</span>
+              <span class="jt-label">Single Journey</span>
+              <span class="jt-sub">One way</span>
+            </button>
+            <button type="button" class="jt-btn" id="jt-return" onclick="setJourneyType('return')" aria-checked="false">
+              <span class="jt-icon">&#8644;</span>
+              <span class="jt-label">Return Journey</span>
+              <span class="jt-sub">There &amp; back</span>
+            </button>
+          </div>
+        </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
           <div class="fg">
-            <label for="bk-date">Travel Date <span class="req">*</span></label>
+            <label for="bk-date">Outbound Date <span class="req">*</span></label>
             <input id="bk-date" type="date" class="inp" required aria-required="true">
             <span class="field-error">Please choose a date.</span>
           </div>
@@ -796,9 +834,10 @@ document.addEventListener('click',function(e){if(!e.target.closest('.navbar')){u
             <input id="bk-time" type="time" class="inp" value="08:00" required>
           </div>
         </div>
-        <div class="fg">
-          <label for="bk-ret">Return Date <span style="color:var(--gray);font-weight:400">(if applicable)</span></label>
+        <div class="fg" id="ret-date-group" style="display:none">
+          <label for="bk-ret">Return Date <span class="req">*</span></label>
           <input id="bk-ret" type="date" class="inp">
+          <span class="field-error" id="ret-error">Return date must be after the outbound date.</span>
         </div>
         <div class="bk-nav">
           <button class="btn btn-out-w" onclick="goStep(1)" style="background:rgba(28,10,4,.08);border-color:var(--bdr);color:var(--black)">&#8592; Back</button>
@@ -851,7 +890,15 @@ document.addEventListener('click',function(e){if(!e.target.closest('.navbar')){u
         </div>
         <div class="fg">
           <label for="bk-notes">Special Requirements</label>
-          <textarea id="bk-notes" class="txta" placeholder="Luggage, child seat, disability needs, return details..."></textarea>
+          <textarea id="bk-notes" class="txta" placeholder="Luggage, child seat, disability needs, route preferences..."></textarea>
+        </div>
+        <div class="fg budget-field">
+          <label for="bk-budget">Your Budget <span class="budget-opt">(optional)</span></label>
+          <div class="budget-input-wrap">
+            <span class="budget-currency">UGX</span>
+            <input id="bk-budget" type="text" class="inp budget-inp" placeholder="e.g. 150,000 — 250,000" inputmode="numeric">
+          </div>
+          <p class="budget-hint">&#128161; Share your rough budget and Reggane will confirm a fair price before your trip. No obligation — pricing is transparent, not tourist-fixed.</p>
         </div>
         <div class="bk-note">
           <strong>&#128161; How booking works</strong>
@@ -875,13 +922,16 @@ document.addEventListener('click',function(e){if(!e.target.closest('.navbar')){u
         <div class="summary-box">
           <h4>Booking Summary</h4>
           <div class="sum-row"><span class="sum-key">Trip Type</span><span class="sum-val" id="sum-trip">&mdash;</span></div>
+          <div class="sum-row"><span class="sum-key">Journey</span><span class="sum-val" id="sum-journey">&mdash;</span></div>
           <div class="sum-row"><span class="sum-key">Pick-up</span><span class="sum-val" id="sum-pickup">&mdash;</span></div>
           <div class="sum-row"><span class="sum-key">Destination</span><span class="sum-val" id="sum-dest">&mdash;</span></div>
-          <div class="sum-row"><span class="sum-key">Date &amp; Time</span><span class="sum-val" id="sum-dt">&mdash;</span></div>
+          <div class="sum-row"><span class="sum-key">Outbound Date</span><span class="sum-val" id="sum-dt">&mdash;</span></div>
+          <div class="sum-row" id="sum-ret-row" style="display:none"><span class="sum-key">Return Date</span><span class="sum-val" id="sum-ret">&mdash;</span></div>
           <div class="sum-row"><span class="sum-key">Vehicle</span><span class="sum-val" id="sum-veh">&mdash;</span></div>
           <div class="sum-row"><span class="sum-key">Passengers</span><span class="sum-val" id="sum-pax">&mdash;</span></div>
           <div class="sum-row"><span class="sum-key">Name</span><span class="sum-val" id="sum-name">&mdash;</span></div>
           <div class="sum-row"><span class="sum-key">Phone</span><span class="sum-val" id="sum-phone">&mdash;</span></div>
+          <div class="sum-row" id="sum-budget-row" style="display:none"><span class="sum-key">Your Budget</span><span class="sum-val" id="sum-budget">&mdash;</span></div>
         </div>
 
         <!-- SUCCESS STATE -->
@@ -912,7 +962,7 @@ document.addEventListener('click',function(e){if(!e.target.closest('.navbar')){u
 </main>
 
 <script>
-var bk={trip:'Airport Transfer',vehicle:'Toyota Noah',vehicleCap:'Up to 8 passengers'};
+var bk={trip:'Airport Transfer',vehicle:'Toyota Noah',vehicleCap:'Up to 8 passengers',journey:'single'};
 
 // Pre-fill from URL
 (function(){
@@ -929,6 +979,19 @@ document.getElementById('bk-date').min=new Date().toISOString().split('T')[0];
 
 function selectTrip(el,type){document.querySelectorAll('.tt-card').forEach(function(c){c.classList.remove('selected');c.setAttribute('aria-checked','false');});el.classList.add('selected');el.setAttribute('aria-checked','true');bk.trip=type;}
 function selectVeh(el,name,cap){document.querySelectorAll('.veh-card').forEach(function(c){c.classList.remove('selected');});el.classList.add('selected');bk.vehicle=name;bk.vehicleCap=cap;}
+
+function setJourneyType(type){
+  bk.journey=type;
+  var isSingle=(type==='single');
+  document.getElementById('jt-single').classList.toggle('active',isSingle);
+  document.getElementById('jt-return').classList.toggle('active',!isSingle);
+  document.getElementById('jt-single').setAttribute('aria-checked',isSingle?'true':'false');
+  document.getElementById('jt-return').setAttribute('aria-checked',isSingle?'false':'true');
+  var retGroup=document.getElementById('ret-date-group');
+  retGroup.style.display=isSingle?'none':'';
+  document.getElementById('bk-ret').required=!isSingle;
+  if(isSingle){document.getElementById('bk-ret').value='';retGroup.classList.remove('has-error');}
+}
 
 function getLocation(){
   var btn=document.getElementById('geoBtn'),st=document.getElementById('geoStatus');
@@ -959,15 +1022,33 @@ function goStep(n){
 }
 
 function validateStep2(){
-  var p=document.getElementById('bk-pickup').value.trim(),d=document.getElementById('bk-dest').value.trim(),dt=document.getElementById('bk-date').value;
-  if(!p||!d||!dt){
-    if(!p){var fg=document.getElementById('bk-pickup').closest('.fg');fg.classList.add('has-error');}
-    if(!d){var fg2=document.getElementById('bk-dest').closest('.fg');fg2.classList.add('has-error');}
-    if(!dt){var fg3=document.getElementById('bk-date').closest('.fg');fg3.classList.add('has-error');}
-    return;
+  var p=document.getElementById('bk-pickup').value.trim(),
+      d=document.getElementById('bk-dest').value.trim(),
+      dt=document.getElementById('bk-date').value,
+      rt=document.getElementById('bk-ret').value;
+  var ok=true;
+  if(!p){document.getElementById('bk-pickup').closest('.fg').classList.add('has-error');ok=false;}
+  if(!d){document.getElementById('bk-dest').closest('.fg').classList.add('has-error');ok=false;}
+  if(!dt){document.getElementById('bk-date').closest('.fg').classList.add('has-error');ok=false;}
+  if(bk.journey==='return'){
+    var retGroup=document.getElementById('ret-date-group');
+    var retErr=document.getElementById('ret-error');
+    if(!rt){retGroup.classList.add('has-error');retErr.textContent='Please choose a return date.';ok=false;}
+    else if(dt&&rt<=dt){retGroup.classList.add('has-error');retErr.textContent='Return date must be after the outbound date.';ok=false;}
+    else{retGroup.classList.remove('has-error');}
   }
-  goStep(3);
+  if(ok)goStep(3);
 }
+document.addEventListener('DOMContentLoaded',function(){
+  document.getElementById('bk-ret').addEventListener('change',function(){
+    var dt=document.getElementById('bk-date').value;
+    if(this.value&&(!dt||this.value>dt))document.getElementById('ret-date-group').classList.remove('has-error');
+  });
+  document.getElementById('bk-date').addEventListener('change',function(){
+    var rt=document.getElementById('bk-ret').value;
+    if(rt&&rt<=this.value){document.getElementById('ret-date-group').classList.add('has-error');document.getElementById('ret-error').textContent='Return date must be after the outbound date.';}
+  });
+});
 
 function validateStep4(){
   var n=document.getElementById('bk-fname').value.trim(),ph=document.getElementById('bk-phone').value.trim(),px=document.getElementById('bk-pax').value;
@@ -989,29 +1070,47 @@ document.querySelectorAll('.inp,.sel').forEach(function(inp){
 });
 
 function buildSummary(){
+  var isReturn=(bk.journey==='return');
   document.getElementById('sum-trip').textContent=bk.trip;
+  document.getElementById('sum-journey').textContent=isReturn?'Return Journey (there & back)':'Single Journey (one way)';
   document.getElementById('sum-pickup').textContent=document.getElementById('bk-pickup').value||'—';
   document.getElementById('sum-dest').textContent=document.getElementById('bk-dest').value||'—';
   document.getElementById('sum-dt').textContent=(document.getElementById('bk-date').value||'—')+' at '+(document.getElementById('bk-time').value||'—');
+  var retRow=document.getElementById('sum-ret-row'),retVal=document.getElementById('bk-ret').value;
+  if(isReturn&&retVal){retRow.style.display='';document.getElementById('sum-ret').textContent=retVal;}
+  else{retRow.style.display='none';}
   document.getElementById('sum-veh').textContent=bk.vehicle+' ('+bk.vehicleCap+')';
   document.getElementById('sum-pax').textContent=document.getElementById('bk-pax').value||'—';
   document.getElementById('sum-name').textContent=document.getElementById('bk-fname').value||'—';
   document.getElementById('sum-phone').textContent=document.getElementById('bk-phone').value||'—';
+  var budget=document.getElementById('bk-budget').value.trim();
+  var budgetRow=document.getElementById('sum-budget-row');
+  if(budget){budgetRow.style.display='';document.getElementById('sum-budget').textContent='UGX '+budget;}
+  else{budgetRow.style.display='none';}
 }
 
 function sendWhatsApp(){
-  var msg=['*NEW BOOKING — Mugabo Travels*','',
-    '&#128203; *Trip Type:* '+bk.trip,
-    '&#128205; *Pick-up:* '+(document.getElementById('bk-pickup').value||'—'),
-    '&#127937; *Destination:* '+(document.getElementById('bk-dest').value||'—'),
-    '&#128197; *Date:* '+(document.getElementById('bk-date').value||'—'),
-    '&#9200; *Time:* '+(document.getElementById('bk-time').value||'—'),
-    '&#128663; *Vehicle:* '+bk.vehicle,
-    '&#128101; *Passengers:* '+(document.getElementById('bk-pax').value||'—'),
-    '&#128100; *Name:* '+(document.getElementById('bk-fname').value||'—'),
-    '&#128241; *Phone:* '+(document.getElementById('bk-phone').value||'—'),
-    '&#128221; *Notes:* '+(document.getElementById('bk-notes').value||'None'),
-  ].join('\n');
+  var isReturn=(bk.journey==='return'),retDate=document.getElementById('bk-ret').value,budget=document.getElementById('bk-budget').value.trim();
+  var lines=['*NEW BOOKING — Mugabo Travels*','',
+    '\uD83D\uDCCB *Trip Type:* '+bk.trip,
+    '\u21C4 *Journey:* '+(isReturn?'RETURN (there & back)':'SINGLE (one way)'),
+    '',
+    '\uD83D\uDCCD *Pick-up:* '+(document.getElementById('bk-pickup').value||'—'),
+    '\uD83C\uDFC1 *Destination:* '+(document.getElementById('bk-dest').value||'—'),
+    '\uD83D\uDCC5 *Outbound Date:* '+(document.getElementById('bk-date').value||'—'),
+    '\u23F0 *Pick-up Time:* '+(document.getElementById('bk-time').value||'—'),
+  ];
+  if(isReturn&&retDate){lines.push('\uD83D\uDCC5 *Return Date:* '+retDate);}
+  lines.push('',
+    '\uD83D\uDE97 *Vehicle:* '+bk.vehicle,
+    '\uD83D\uDC65 *Passengers:* '+(document.getElementById('bk-pax').value||'—'),
+    '',
+    '\uD83D\uDC64 *Name:* '+(document.getElementById('bk-fname').value||'—'),
+    '\uD83D\uDCF1 *Phone:* '+(document.getElementById('bk-phone').value||'—'),
+    '\uD83D\uDCDD *Notes:* '+(document.getElementById('bk-notes').value||'None')
+  );
+  if(budget){lines.push('','\uD83D\uDCB0 *Customer Budget:* UGX '+budget+' (customer named this — please confirm your fair price)');}
+  var msg=lines.join('\n');
   window.open('https://wa.me/256706689064?text='+encodeURIComponent(msg),'_blank');
   // Show success state
   document.getElementById('confirmBtn').style.display='none';
