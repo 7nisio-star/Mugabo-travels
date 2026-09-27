@@ -110,26 +110,8 @@
 .hero h1 span { color: var(--ug-yellow) !important; }
 .tp-dot { background: var(--ug-yellow) !important; }
 
-/* ── BOOKING WIDGET — clean white card on black ── */
-.bw { box-shadow: 0 20px 60px rgba(0,0,0,.35) !important; }
-.bw-tab.active {
-  color: var(--ug-black) !important;
-  border-bottom-color: var(--ug-red) !important;
-  font-weight: 700 !important;
-}
-.bw-field:focus-within {
-  border-color: var(--ug-red) !important;
-  box-shadow: 0 0 0 3px rgba(217,0,0,.12) !important;
-}
-.bw-dt:focus-within { border-color: var(--ug-red) !important; }
-.bw-return:hover { border-color: var(--ug-red) !important; color: var(--ug-red) !important; }
-.bw-return.active { border-color: var(--ug-red) !important; color: var(--ug-red) !important; }
-.pax-btn:hover { border-color: var(--ug-red) !important; color: var(--ug-red) !important; }
-.bw-go {
-  background: var(--ug-red) !important;
-  color: #fff !important;
-}
-.bw-go:hover { background: #B00000 !important; transform: translateY(-1px); }
+/* ── BOOKING WIDGET — dark tile skin ── */
+.bw-wrap { box-shadow: 0 20px 60px rgba(0,0,0,.55) !important; }
 
 /* ── BUTTONS ── */
 .btn-dark {
@@ -660,12 +642,18 @@ button,input,select,textarea{font-family:var(--f)}
 
 /* Booking widget */
 .bw{background:#fff;border-radius:var(--rl);padding:0;overflow:hidden;box-shadow:0 20px 60px rgba(28,10,4,.3);margin-bottom:2.5rem;border:1px solid var(--bdr)}
-.bw-tabs{display:flex;border-bottom:1px solid var(--bdr)}
-.bw-tab{flex:1;padding:.88rem 1rem;font-size:.8rem;font-weight:600;background:none;border:none;cursor:pointer;color:var(--gray);display:flex;align-items:center;justify-content:center;gap:.35rem;transition:all .2s;border-bottom:2px solid transparent;margin-bottom:-1px;font-family:var(--f)}
-.bw-tab.active{color:var(--black);border-bottom-color:var(--orange);font-weight:700}
+.bw-wrap{background:rgba(17,17,17,.96);border:1px solid rgba(252,220,4,.18);border-radius:16px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.55)}
+.bw-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.bw-tile{position:relative;padding:.9rem .6rem .8rem;background:transparent;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:.25rem;transition:background .18s;font-family:var(--f);border-bottom:2px solid rgba(255,255,255,.06)}
+.bw-tile:not(:last-child){border-right:1px solid rgba(255,255,255,.06)}
+.bw-tile.active{background:rgba(252,220,4,.1);border-bottom-color:var(--ug-yellow)}
+.bw-tile:hover:not(.active){background:rgba(255,255,255,.04)}
+.bw-tile-icon{font-size:1.3rem;line-height:1}
+.bw-tile-lbl{font-size:.68rem;font-weight:700;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.08em;transition:color .18s}
+.bw-tile.active .bw-tile-lbl{color:var(--ug-yellow)}
 .bw-body{padding:1.25rem}
-.bw-field{display:flex;align-items:center;gap:.75rem;padding:.85rem 1rem;border:1.5px solid var(--bdr);border-radius:8px;background:#fff;margin-bottom:.6rem;transition:border-color .2s,box-shadow .2s;cursor:text}
-.bw-field:focus-within{border-color:var(--orange);box-shadow:0 0 0 3px rgba(217,119,6,.14)}
+.bw-field{display:flex;align-items:center;gap:.75rem;padding:.85rem 1rem;border:1.5px solid rgba(255,255,255,.1);border-radius:8px;background:rgba(255,255,255,.05);margin-bottom:.6rem;transition:border-color .2s,box-shadow .2s;cursor:text}
+.bw-field:focus-within{border-color:var(--ug-yellow) !important;box-shadow:0 0 0 3px rgba(252,220,4,.14) !important}
 .bw-icon{color:var(--gray-lt);flex-shrink:0}
 .bw-lbl{font-size:.62rem;font-weight:600;color:var(--gray);letter-spacing:.05em;text-transform:uppercase;display:block;margin-bottom:.15rem}
 .bw-fi{width:100%;border:none;outline:none;font-family:var(--f);font-size:.93rem;color:var(--black);background:transparent;padding:0}
@@ -685,8 +673,29 @@ button,input,select,textarea{font-family:var(--f)}
 .pax-btn:hover{border-color:var(--orange);color:var(--orange)}
 .pax-btn:disabled{opacity:.3;cursor:not-allowed}
 .pax-n{font-size:.95rem;font-weight:600;min-width:22px;text-align:center;color:var(--black)}
-.bw-go{width:100%;background:var(--black);color:#fff;border:none;padding:.95rem;border-radius:8px;font-family:var(--f);font-size:.93rem;font-weight:700;cursor:pointer;transition:all .22s;display:flex;align-items:center;justify-content:center;gap:.5rem;min-height:50px}
-.bw-go:hover{background:#3d1e0f;transform:translateY(-1px)}
+.bw-go{width:100%;background:var(--ug-red);color:#fff;border:none;padding:1rem;border-radius:8px;font-family:var(--f);font-size:.95rem;font-weight:800;cursor:pointer;transition:all .22s;display:flex;align-items:center;justify-content:center;gap:.5rem;min-height:52px;letter-spacing:.01em}
+.bw-go:hover{background:#B00000;transform:translateY(-1px)}
+/* bw dark-theme overrides */
+.bw-body{padding:1.1rem 1.1rem .85rem}
+.bw-lbl{font-size:.67rem;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.05em}
+.bw-fi{background:none;border:none;outline:none;font-family:var(--f);font-size:.92rem;color:#fff;width:100%;padding:0}
+.bw-fi::placeholder{color:rgba(255,255,255,.3)}
+.bw-icon{color:rgba(255,255,255,.35);flex-shrink:0}
+.bw-dt{display:flex;align-items:center;gap:.7rem;padding:.8rem 1rem;border:1.5px solid rgba(255,255,255,.1);border-radius:8px;background:rgba(255,255,255,.05);flex:1;transition:border-color .2s}
+.bw-dt:focus-within{border-color:var(--ug-yellow) !important}
+.bw-dt input{background:none;border:none;outline:none;font-family:var(--f);font-size:.88rem;color:#fff;width:100%;min-width:0;color-scheme:dark}
+.bw-dt-row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:.6rem}
+.bw-return{display:flex;align-items:center;justify-content:center;padding:.65rem;border:1.5px dashed rgba(255,255,255,.18);border-radius:8px;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.45);cursor:pointer;margin-bottom:.6rem;transition:all .2s;gap:.4rem;background:none;width:100%;font-family:var(--f)}
+.bw-return:hover{border-color:var(--ug-yellow);color:var(--ug-yellow)}
+.bw-return.active{border-style:solid;border-color:var(--ug-yellow);color:var(--ug-yellow);background:rgba(252,220,4,.06)}
+.bw-pax{display:flex;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1.5px solid rgba(255,255,255,.1);border-radius:8px;margin-bottom:.85rem;background:rgba(255,255,255,.05)}
+.bw-pax-lbl{font-size:.82rem;font-weight:600;color:#fff}
+.bw-pax-sub{font-size:.72rem;color:rgba(255,255,255,.4)}
+.pax-c{display:flex;align-items:center;gap:.6rem}
+.pax-btn{width:32px;height:32px;border-radius:6px;border:1.5px solid rgba(255,255,255,.2);background:rgba(255,255,255,.07);color:#fff;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .18s;font-family:var(--f)}
+.pax-btn:hover:not(:disabled){border-color:var(--ug-yellow);color:var(--ug-yellow)}
+.pax-btn:disabled{opacity:.3;cursor:default}
+.pax-n{font-size:1rem;font-weight:700;color:#fff;min-width:1.5rem;text-align:center}
 
 /* Trust badges strip */
 .trust-strip{background:var(--off-white);border-top:1px solid var(--bdr);padding:2.5rem 1.5rem}
@@ -722,7 +731,6 @@ button,input,select,textarea{font-family:var(--f)}
       <li><a href="index.html" aria-current="page">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="fleet.html">Fleet</a></li>
       <li><a href="tracking.html">Track Trip</a></li>
       <li><a href="booking.html" class="nav-book">Book Now</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -750,11 +758,20 @@ button,input,select,textarea{font-family:var(--f)}
     <h1>Your ride<br>across <span>Uganda</span></h1>
     <p class="hero-sub">Airport transfers, safaris, city tours and car hire. No tourist pricing &mdash; ever.</p>
 
-    <div class="bw" role="search" aria-label="Quick booking">
-      <div class="bw-tabs" role="tablist">
-        <button class="bw-tab active" role="tab" aria-selected="true"  onclick="setTab(this,'transfer')">&#128663; Transfer</button>
-        <button class="bw-tab"        role="tab" aria-selected="false" onclick="setTab(this,'hourly')">&#128336; By the Hour</button>
-        <button class="bw-tab"        role="tab" aria-selected="false" onclick="setTab(this,'safari')">&#128024; Safari</button>
+    <div class="bw bw-wrap" role="search" aria-label="Quick booking">
+      <div class="bw-tiles" role="tablist" aria-label="Trip type">
+        <button class="bw-tile active" role="tab" aria-selected="true"  onclick="setTab(this,'transfer')">
+          <span class="bw-tile-icon">🚗</span>
+          <span class="bw-tile-lbl">Transfer</span>
+        </button>
+        <button class="bw-tile" role="tab" aria-selected="false" onclick="setTab(this,'hourly')">
+          <span class="bw-tile-icon">🕐</span>
+          <span class="bw-tile-lbl">By the Hour</span>
+        </button>
+        <button class="bw-tile" role="tab" aria-selected="false" onclick="setTab(this,'safari')">
+          <span class="bw-tile-icon">🐘</span>
+          <span class="bw-tile-lbl">Safari</span>
+        </button>
       </div>
       <div class="bw-body">
         <div class="bw-field">
@@ -948,7 +965,7 @@ function searchNow(){
     </div>
     <div class="f-col"><h4>Pages</h4><ul>
       <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li><li><a href="fleet.html">Fleet</a></li>
+      <li><a href="services.html">Services</a></li>
       <li><a href="tracking.html">Track My Trip</a></li><li><a href="booking.html">Book a Trip</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul></div>
