@@ -28,6 +28,10 @@
    Black · Yellow · Red  (Ugandan national colours)
    ══════════════════════════════════════════════ */
 :root {
+  --ug-green:#1a472a;
+  --ug-amber:#F59E0B;
+  --ug-amber-d:#D97706;
+
   --navy:        #8B0000;   /* deep crimson — secondary brand */
   --navy-d:      #111111;   /* near-black (replaces navy-deep) */
   --navy-m:      #C00000;   /* mid red */
@@ -58,8 +62,8 @@
 
 /* ── NAVBAR — black with gold accent ── */
 .site-header {
-  background: rgba(17,17,17,.97) !important;
-  border-bottom: 2px solid var(--ug-yellow) !important;
+  background: rgba(26,71,42,.98) !important;
+  border-bottom: 2px solid var(--ug-amber, #F59E0B) !important;
 }
 .nav-brand img { border-color: var(--ug-yellow) !important; }
 .brand-main em { color: var(--ug-yellow) !important; }
@@ -83,7 +87,7 @@
 
 /* ── UGANDA FLAG STRIPE on hero ── */
 .hero-left {
-  background: var(--ug-black) !important;
+  background: var(--ug-green, #1a472a) !important;
   border-right: 4px solid var(--ug-yellow) !important;
 }
 .hero-left::before {
@@ -120,7 +124,7 @@
 
 /* ── BUTTONS ── */
 .btn-dark {
-  background: var(--ug-black) !important;
+  background: var(--ug-green, #1a472a) !important;
   border-color: var(--ug-black) !important;
   color: #fff !important;
 }
@@ -134,10 +138,10 @@
 .btn-o:hover { background: var(--ug-red) !important; border-color: var(--ug-red) !important; color: #fff !important; }
 
 /* Primary action buttons — red */
-.bk-card-head { background: var(--ug-black) !important; }
+.bk-card-head { background: var(--ug-green, #1a472a) !important; }
 .step-badge { background: var(--ug-yellow) !important; color: var(--ug-black) !important; }
 .step.active .step-num { border-color: var(--ug-red) !important; background: var(--ug-red) !important; color: #fff !important; }
-.step.done .step-num { border-color: var(--ug-black) !important; background: var(--ug-black) !important; }
+.step.done .step-num { border-color: var(--ug-black) !important; background: var(--ug-green, #1a472a) !important; }
 .step.active .step-label { color: var(--ug-red) !important; }
 .tt-card.selected { border-color: var(--ug-red) !important; background: rgba(217,0,0,.06) !important; box-shadow: 0 0 0 3px rgba(217,0,0,.15) !important; }
 .tt-card:hover { border-color: var(--ug-red) !important; background: rgba(217,0,0,.04) !important; }
@@ -155,7 +159,7 @@ button.btn-o { background: var(--ug-red) !important; border-color: var(--ug-red)
 .inp.invalid,.inp.has-error,.sel.invalid { border-color: var(--ug-red) !important; }
 
 /* ── PAGE HERO ── */
-.page-hero { background: var(--ug-black) !important; border-bottom: 4px solid var(--ug-yellow) !important; }
+.page-hero { background: var(--ug-green, #1a472a) !important; border-bottom: 4px solid var(--ug-yellow) !important; }
 .page-hero::before { background: radial-gradient(ellipse at 50% 110%,rgba(217,0,0,.18),transparent 60%) !important; }
 .page-hero h1 span { color: var(--ug-yellow) !important; }
 .page-hero p { color: rgba(255,255,255,.75) !important; }
@@ -188,7 +192,7 @@ button.btn-o { background: var(--ug-red) !important; border-color: var(--ug-red)
 }
 
 /* ── STATS STRIP ── */
-.stats-strip { background: var(--ug-black) !important; border-top: 3px solid var(--ug-yellow) !important; border-bottom: 3px solid var(--ug-yellow) !important; }
+.stats-strip { background: var(--ug-green, #1a472a) !important; border-top: 3px solid var(--ug-yellow) !important; border-bottom: 3px solid var(--ug-yellow) !important; }
 .stats-strip .sw { border: none !important; padding: 2.5rem 0 !important; }
 .sn { color: var(--ug-yellow) !important; }
 .sl { color: rgba(255,255,255,.7) !important; }
@@ -200,18 +204,18 @@ button.btn-o { background: var(--ug-red) !important; border-color: var(--ug-red)
 /* ── TESTIMONIALS ── */
 .t-card:hover { border-color: var(--ug-red) !important; }
 .t-stars { color: var(--ug-yellow) !important; }
-.t-av { background: var(--ug-black) !important; border: 2px solid var(--ug-yellow) !important; }
+.t-av { background: var(--ug-green, #1a472a) !important; border: 2px solid var(--ug-yellow) !important; }
 
 /* ── SECTION TAGS ── */
 .sh { color: var(--ug-red) !important; }
 
 /* ── FEAT CARDS ── */
 .feat-card:hover { border-color: var(--ug-red) !important; }
-.feat-card:hover .feat-icon { background: var(--ug-black) !important; }
+.feat-card:hover .feat-icon { background: var(--ug-green, #1a472a) !important; }
 .feat-icon { background: rgba(217,0,0,.08) !important; border-color: rgba(217,0,0,.15) !important; }
 
 /* ── CTA BAND ── */
-.cta-band { background: var(--ug-black) !important; border-top: none !important; }
+.cta-band { background: var(--ug-green, #1a472a) !important; border-top: none !important; }
 .cta-band h2 { color: var(--ug-yellow) !important; }
 .cta-band p { color: rgba(255,255,255,.7) !important; }
 .cta-band .btn-dark {
@@ -230,8 +234,8 @@ button.btn-o { background: var(--ug-red) !important; border-color: var(--ug-red)
 
 /* ── FOOTER ── */
 .site-footer {
-  background: #0a0a0a !important;
-  border-top: 4px solid var(--ug-yellow) !important;
+  background: #0a1f10 !important;
+  border-top: 4px solid #F59E0B !important;
 }
 .footer-brand em { color: var(--ug-yellow) !important; }
 .site-footer h4 { color: var(--ug-yellow) !important; }
@@ -246,9 +250,9 @@ button.btn-o { background: var(--ug-red) !important; border-color: var(--ug-red)
 /* ── SERVICES / FLEET ── */
 .svc-big:hover { border-color: var(--ug-red) !important; }
 .svc-big-icon { background: rgba(217,0,0,.08) !important; border-color: rgba(217,0,0,.15) !important; }
-.svc-big:hover .svc-big-icon { background: var(--ug-black) !important; }
+.svc-big:hover .svc-big-icon { background: var(--ug-green, #1a472a) !important; }
 .fleet-card:hover { border-color: var(--ug-yellow) !important; }
-.fv-top { background: var(--ug-black) !important; }
+.fv-top { background: var(--ug-green, #1a472a) !important; }
 .fv-badge {
   background: rgba(252,220,4,.2) !important;
   border-color: rgba(252,220,4,.35) !important;
@@ -261,13 +265,13 @@ button.btn-o { background: var(--ug-red) !important; border-color: var(--ug-red)
 .p4 { background: linear-gradient(135deg,#2a0000,#111111) !important; }
 
 /* ── CONTACT ── */
-.ct-card, .contact-info-card, .cic { background: var(--ug-black) !important; border: 1px solid rgba(252,220,4,.2) !important; }
+.ct-card, .contact-info-card, .cic { background: var(--ug-green, #1a472a) !important; border: 1px solid rgba(252,220,4,.2) !important; }
 .ct-card h3, .contact-info-card h3 { color: var(--ug-yellow) !important; }
 .cdi, .cd-icon { background: rgba(252,220,4,.15) !important; }
 .wa-link2:hover,.wa-l2:hover { opacity:.88; }
 
 /* ── DARK SECTION ── */
-.section.dark { background: var(--ug-black) !important; }
+.section.dark { background: var(--ug-green, #1a472a) !important; }
 .section.dark .st { color: var(--ug-yellow) !important; }
 
 /* ── TRACKING TIMELINE ── */
@@ -276,15 +280,15 @@ button.btn-o { background: var(--ug-red) !important; border-color: var(--ug-red)
   border-color: var(--ug-red) !important;
   box-shadow: 0 0 0 4px rgba(217,0,0,.2), 0 0 0 8px rgba(217,0,0,.08) !important;
 }
-.tl-step.done .tl-icon { background: var(--ug-black) !important; border-color: var(--ug-black) !important; }
-.tl-step.done::before { background: var(--ug-black) !important; }
+.tl-step.done .tl-icon { background: var(--ug-green, #1a472a) !important; border-color: var(--ug-black) !important; }
+.tl-step.done::before { background: var(--ug-green, #1a472a) !important; }
 .tl-step.active::before { background: linear-gradient(var(--ug-black),var(--bdr)) !important; }
-.sc-head { background: var(--ug-black) !important; border-bottom: 2px solid var(--ug-yellow) !important; }
+.sc-head { background: var(--ug-green, #1a472a) !important; border-bottom: 2px solid var(--ug-amber, #F59E0B) !important; }
 .sc-badge { background: var(--ug-yellow) !important; color: var(--ug-black) !important; }
 
 /* ── DEMO STEP BUTTONS (tracking) ── */
 .demo-step-btn.active { border-color: var(--ug-red) !important; color: var(--ug-red) !important; background: rgba(217,0,0,.08) !important; }
-.lookup-btn { background: var(--ug-black) !important; border: 2px solid var(--ug-yellow) !important; color: #fff !important; }
+.lookup-btn { background: var(--ug-green, #1a472a) !important; border: 2px solid var(--ug-yellow) !important; color: #fff !important; }
 .lookup-btn:hover { background: var(--ug-red) !important; border-color: var(--ug-red) !important; }
 
 /* ── FOCUS RING ── yellow, high visibility ── */
