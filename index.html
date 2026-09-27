@@ -809,66 +809,151 @@ button,input,select,textarea{font-family:var(--f)}
   <div class="hero-right">
     <div class="hero-map-box">
       <div class="hero-map-label">📍 We operate across Uganda</div>
-      <svg class="uganda-map" viewBox="0 0 220 240" xmlns="http://www.w3.org/2000/svg" aria-label="Map of Uganda">
+      <svg class="uganda-map" viewBox="0 0 260 280" xmlns="http://www.w3.org/2000/svg" aria-label="Map of Uganda">
         <defs>
           <radialGradient id="ugfill" cx="50%" cy="50%" r="55%">
             <stop offset="0%" stop-color="#276237"/>
             <stop offset="100%" stop-color="#1a472a"/>
           </radialGradient>
+          <radialGradient id="lakefill" cx="50%" cy="50%" r="60%">
+            <stop offset="0%" stop-color="rgba(96,165,250,.35)"/>
+            <stop offset="100%" stop-color="rgba(37,99,235,.2)"/>
+          </radialGradient>
           <filter id="glow">
             <feGaussianBlur stdDeviation="2.5" result="blur"/>
             <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
           </filter>
+          <filter id="lakeglow">
+            <feGaussianBlur stdDeviation="1.5" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
         </defs>
-        <!-- Uganda outline — simplified realistic shape -->
+
+        <!-- Uganda outline — accurate shape based on reference map -->
+        <!-- Coordinates mapped to 260x280 viewBox. North~top, South~bottom -->
+        <!-- Uganda real bounds: ~N4° to S1.5°, E30° to E35° -->
         <path class="ug-country" d="
-          M 88,14 L 95,10 L 108,12 L 122,8 L 138,14 L 148,22 L 160,28
-          L 168,38 L 172,52 L 175,68 L 174,85 L 170,98 L 168,112
-          L 165,125 L 162,138 L 158,150 L 152,162 L 144,172
-          L 136,180 L 126,186 L 115,190 L 104,192 L 92,190
-          L 80,185 L 70,178 L 60,168 L 52,156 L 46,142
-          L 42,128 L 40,112 L 40,96 L 42,80 L 46,65
-          L 52,50 L 60,38 L 70,26 L 80,18 Z
-        " fill="url(#ugfill)" stroke="rgba(245,158,11,.5)" stroke-width="1.5"/>
+          M 128,10
+          L 140,11 L 152,9 L 162,13 L 172,20 L 180,28
+          L 188,36 L 195,46 L 198,58 L 200,70
+          L 200,82 L 198,95 L 196,108
+          L 197,120 L 198,130 L 196,142
+          L 193,152 L 188,162 L 182,170
+          L 177,178 L 172,185 L 165,192
+          L 158,198 L 150,204 L 142,208
+          L 132,212 L 120,214 L 108,213
+          L 96,210 L 84,205 L 74,198
+          L 66,190 L 60,182 L 56,173
+          L 52,163 L 48,152 L 44,140
+          L 40,128 L 38,116 L 36,104
+          L 36,92 L 36,80
+          L 38,68 L 42,57 L 48,47
+          L 56,36 L 66,26 L 78,18
+          L 90,13 L 102,10 L 115,9 Z
+        " fill="url(#ugfill)" stroke="rgba(245,158,11,.45)" stroke-width="1.5"/>
 
-        <!-- Lake Victoria (bottom right) -->
-        <ellipse cx="165" cy="195" rx="30" ry="22" fill="rgba(59,130,246,.25)" stroke="rgba(59,130,246,.4)" stroke-width="1"/>
-        <text x="148" y="198" font-size="5.5" fill="rgba(147,197,253,.7)" font-family="sans-serif" text-anchor="middle">Lake Victoria</text>
+        <!-- Lake Victoria (SE corner — partially in Uganda) -->
+        <path d="M 165,215 L 178,205 L 192,210 L 200,222 L 205,238
+                 L 202,252 L 194,260 L 183,264 L 170,262 L 160,256
+                 L 152,246 L 148,234 L 150,222 Z"
+              fill="url(#lakefill)" stroke="rgba(96,165,250,.5)" stroke-width="1" filter="url(#lakeglow)"/>
+        <text x="176" y="248" font-size="5.5" fill="rgba(147,197,253,.8)" font-family="sans-serif" text-anchor="middle">Lake Victoria</text>
 
-        <!-- Lake Albert (left) -->
-        <ellipse cx="38" cy="100" rx="10" ry="22" fill="rgba(59,130,246,.2)" stroke="rgba(59,130,246,.35)" stroke-width="1"/>
+        <!-- Lake Albert (NW — long thin N-S lake) -->
+        <path d="M 38,70 L 42,62 L 46,58 L 50,62 L 52,75
+                 L 52,88 L 50,100 L 48,112 L 44,118
+                 L 40,114 L 36,104 L 36,90 L 36,78 Z"
+              fill="url(#lakefill)" stroke="rgba(96,165,250,.45)" stroke-width="1"/>
+        <text x="32" y="90" font-size="4.5" fill="rgba(147,197,253,.7)" font-family="sans-serif" text-anchor="middle" transform="rotate(-75,32,90)">L. Albert</text>
 
-        <!-- Roads / routes — faint lines -->
-        <line x1="88" y1="128" x2="78" y2="138" stroke="rgba(245,158,11,.25)" stroke-width="1" stroke-dasharray="3,2"/>
-        <line x1="88" y1="128" x2="108" y2="122" stroke="rgba(245,158,11,.25)" stroke-width="1" stroke-dasharray="3,2"/>
-        <line x1="88" y1="128" x2="88" y2="18" stroke="rgba(245,158,11,.15)" stroke-width="1" stroke-dasharray="3,3"/>
+        <!-- Lake Kyoga (central — irregular shape) -->
+        <path d="M 110,95 L 122,92 L 134,90 L 144,93 L 148,100
+                 L 144,108 L 136,112 L 126,115 L 116,113
+                 L 106,110 L 100,104 L 102,97 Z"
+              fill="url(#lakefill)" stroke="rgba(96,165,250,.4)" stroke-width="1"/>
+        <text x="124" y="104" font-size="4.5" fill="rgba(147,197,253,.65)" font-family="sans-serif" text-anchor="middle">L. Kyoga</text>
 
-        <!-- Ripple rings around Kampala -->
-        <circle class="ping-ring ping-1" cx="88" cy="128" r="10" fill="none" stroke="#F59E0B" stroke-width="1.5"/>
-        <circle class="ping-ring ping-2" cx="88" cy="128" r="10" fill="none" stroke="#F59E0B" stroke-width="1"/>
-        <circle class="ping-ring ping-3" cx="88" cy="128" r="10" fill="none" stroke="#F59E0B" stroke-width=".6"/>
+        <!-- Lake Edward (SW) -->
+        <path d="M 58,182 L 66,176 L 72,178 L 74,186 L 70,194
+                 L 62,196 L 56,192 L 54,184 Z"
+              fill="url(#lakefill)" stroke="rgba(96,165,250,.4)" stroke-width="1"/>
+        <text x="64" y="202" font-size="4" fill="rgba(147,197,253,.6)" font-family="sans-serif" text-anchor="middle">L. Edward</text>
 
-        <!-- Pin drop group -->
+        <!-- Lake George (between Edward and Kazinga) -->
+        <path d="M 76,178 L 82,174 L 86,178 L 84,184 L 78,186 L 74,182 Z"
+              fill="url(#lakefill)" stroke="rgba(96,165,250,.35)" stroke-width=".8"/>
+
+        <!-- White Nile / Albert Nile — flows N from L. Victoria through Kyoga to Albert -->
+        <path d="M 168,218 L 162,210 L 156,200 L 152,190 L 148,178
+                 L 142,165 L 136,150 L 128,138 L 124,122 L 124,108
+                 L 120,96 L 118,86 L 116,76 L 110,68 L 104,58
+                 L 96,48 L 90,38 L 82,28"
+              fill="none" stroke="rgba(96,165,250,.3)" stroke-width="1.5" stroke-dasharray="none"/>
+
+        <!-- Route lines from Kampala (faint amber) -->
+        <line x1="120" y1="148" x2="100" y2="164" stroke="rgba(245,158,11,.2)" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="120" y1="148" x2="150" y2="138" stroke="rgba(245,158,11,.2)" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="120" y1="148" x2="105" y2="56" stroke="rgba(245,158,11,.12)" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="120" y1="148" x2="68" y2="170" stroke="rgba(245,158,11,.12)" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="120" y1="148" x2="62" y2="90" stroke="rgba(245,158,11,.1)" stroke-width="1" stroke-dasharray="3,4"/>
+
+        <!-- Ripple rings around Kampala (cx=120, cy=148) -->
+        <circle class="ping-ring ping-1" cx="120" cy="148" r="10" fill="none" stroke="#F59E0B" stroke-width="1.5"/>
+        <circle class="ping-ring ping-2" cx="120" cy="148" r="10" fill="none" stroke="#F59E0B" stroke-width="1"/>
+        <circle class="ping-ring ping-3" cx="120" cy="148" r="10" fill="none" stroke="#F59E0B" stroke-width=".6"/>
+
+        <!-- Pin drop group on Kampala -->
         <g class="map-pin" filter="url(#glow)">
-          <!-- Pin shadow -->
-          <ellipse cx="88" cy="143" rx="6" ry="2.5" fill="rgba(0,0,0,.35)" class="pin-shadow"/>
-          <!-- Pin body -->
-          <path d="M 88,108 C 78,108 72,116 72,124 C 72,134 88,148 88,148 C 88,148 104,134 104,124 C 104,116 98,108 88,108 Z"
+          <ellipse cx="120" cy="162" rx="6" ry="2.5" fill="rgba(0,0,0,.35)" class="pin-shadow"/>
+          <path d="M 120,128 C 110,128 104,136 104,144 C 104,154 120,168 120,168 C 120,168 136,154 136,144 C 136,136 130,128 120,128 Z"
                 fill="#F59E0B" stroke="rgba(255,255,255,.4)" stroke-width="1.5"/>
-          <!-- Pin inner dot -->
-          <circle cx="88" cy="124" r="5" fill="rgba(255,255,255,.9)"/>
+          <circle cx="120" cy="144" r="5" fill="rgba(255,255,255,.9)"/>
         </g>
 
-        <!-- City labels -->
-        <text x="92" y="126" font-size="6.5" fill="#fff" font-family="sans-serif" font-weight="bold">Kampala</text>
-        <circle cx="78" cy="138" r="2" fill="rgba(255,255,255,.6)"/>
-        <text x="62" y="141" font-size="5" fill="rgba(255,255,255,.55)" font-family="sans-serif">Entebbe</text>
-        <circle cx="108" cy="122" r="2" fill="rgba(255,255,255,.6)"/>
-        <text x="110" y="121" font-size="5" fill="rgba(255,255,255,.55)" font-family="sans-serif">Jinja</text>
-        <circle cx="105" cy="50" r="2" fill="rgba(255,255,255,.6)"/>
-        <text x="107" y="49" font-size="5" fill="rgba(255,255,255,.55)" font-family="sans-serif">Gulu</text>
-        <circle cx="60" cy="162" r="2" fill="rgba(255,255,255,.6)"/>
-        <text x="44" y="165" font-size="5" fill="rgba(255,255,255,.55)" font-family="sans-serif">Mbarara</text>
+        <!-- City dots and labels -->
+        <!-- Kampala label -->
+        <text x="124" y="146" font-size="6.5" fill="#fff" font-family="sans-serif" font-weight="bold">Kampala</text>
+
+        <!-- Entebbe (SW of Kampala, on lake) -->
+        <circle cx="110" cy="164" r="2" fill="rgba(255,255,255,.65)"/>
+        <text x="90" y="167" font-size="4.8" fill="rgba(255,255,255,.6)" font-family="sans-serif">Entebbe</text>
+
+        <!-- Jinja (E of Kampala, near lake Victoria) -->
+        <circle cx="150" cy="148" r="2" fill="rgba(255,255,255,.65)"/>
+        <text x="152" y="147" font-size="4.8" fill="rgba(255,255,255,.6)" font-family="sans-serif">Jinja</text>
+
+        <!-- Gulu (N) -->
+        <circle cx="110" cy="56" r="2" fill="rgba(255,255,255,.65)"/>
+        <text x="112" y="55" font-size="4.8" fill="rgba(255,255,255,.6)" font-family="sans-serif">Gulu</text>
+
+        <!-- Mbarara (SW) -->
+        <circle cx="86" cy="190" r="2" fill="rgba(255,255,255,.65)"/>
+        <text x="70" y="196" font-size="4.8" fill="rgba(255,255,255,.6)" font-family="sans-serif">Mbarara</text>
+
+        <!-- Fort Portal (W) -->
+        <circle cx="64" cy="140" r="2" fill="rgba(255,255,255,.6)"/>
+        <text x="44" y="144" font-size="4.5" fill="rgba(255,255,255,.55)" font-family="sans-serif">Ft Portal</text>
+
+        <!-- Masindi (NW) -->
+        <circle cx="80" cy="88" r="2" fill="rgba(255,255,255,.6)"/>
+        <text x="82" y="87" font-size="4.5" fill="rgba(255,255,255,.55)" font-family="sans-serif">Masindi</text>
+
+        <!-- Lira (N-central) -->
+        <circle cx="136" cy="72" r="2" fill="rgba(255,255,255,.6)"/>
+        <text x="138" y="71" font-size="4.5" fill="rgba(255,255,255,.55)" font-family="sans-serif">Lira</text>
+
+        <!-- Soroti (NE) -->
+        <circle cx="162" cy="96" r="2" fill="rgba(255,255,255,.6)"/>
+        <text x="164" y="95" font-size="4.5" fill="rgba(255,255,255,.55)" font-family="sans-serif">Soroti</text>
+
+        <!-- Kabale (SW extreme) -->
+        <circle cx="80" cy="216" r="2" fill="rgba(255,255,255,.6)"/>
+        <text x="82" y="222" font-size="4.5" fill="rgba(255,255,255,.55)" font-family="sans-serif">Kabale</text>
+
+        <!-- Moroto (NE extreme) -->
+        <circle cx="184" cy="68" r="2" fill="rgba(255,255,255,.6)"/>
+        <text x="166" y="67" font-size="4.5" fill="rgba(255,255,255,.55)" font-family="sans-serif">Moroto</text>
+
       </svg>
     </div><!-- /hero-map-box -->
     <div class="bw bw-wrap" role="search" aria-label="Quick booking">
